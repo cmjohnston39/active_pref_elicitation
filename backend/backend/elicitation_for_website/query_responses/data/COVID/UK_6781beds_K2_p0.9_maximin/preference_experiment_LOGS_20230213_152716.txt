@@ -1,4 +1,0 @@
-[2023-02-13 15:27:16,600] [query_look_up_table_new.py:create_query_lookup_table] : response number: 0
-[2023-02-13 15:27:22,117] [query_look_up_table_new.py:create_query_lookup_table] : response number: 1
-[2023-02-13 15:27:28,018] [query_look_up_table_new.py:create_query_lookup_table] : response number: 2
-[2023-02-13 15:27:33,265] [query_look_up_table_new.py:create_query_lookup_table] : response number: 3
