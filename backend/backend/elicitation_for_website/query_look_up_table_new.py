@@ -89,28 +89,28 @@ def create_query_lookup_table(args):
                 # print("answere queries", [(q.item_A.id, q.item_B.id,q.response) for q in answered_queries])
                 query_list.append(answered_queries)
 
-                B_mat, b_vec = U0_positive_normed(len(items[0].features))
-
-                s_opt, objval = feasibility_subproblem([q.z for q in answered_queries],
-                                                       valid_responses,
-                                                       len(answered_queries),
-                                                       items,
-                                                       eps=0,
-                                                       B_mat=B_mat,
-                                                       b_vec=b_vec,
-                                                       gamma_inconsistencies=gamma,
-                                                       fixed_responses=[q.response for q in answered_queries],
-                                                       verbose=False)
-                if objval < small:
-                    small = objval
-
-                print("feas objval is", objval)
+                # B_mat, b_vec = U0_positive_normed(len(items[0].features))
+                #
+                # s_opt, objval = feasibility_subproblem([q.z for q in answered_queries],
+                #                                        valid_responses,
+                #                                        len(answered_queries),
+                #                                        items,
+                #                                        eps=0,
+                #                                        B_mat=B_mat,
+                #                                        b_vec=b_vec,
+                #                                        gamma_inconsistencies=gamma,
+                #                                        fixed_responses=[q.response for q in answered_queries],
+                #                                        verbose=False)
+                # if objval < small:
+                #     small = objval
+                #
+                # print("feas objval is", objval)
 
 
                 answered_queries=answered_queries[:-1] #remove just added new query
 
                 # print(items[0])
-            assert (abs(small - objval_opt) < 1e-3)
+            # assert (abs(small - objval_opt) < 1e-3)
 
 
 

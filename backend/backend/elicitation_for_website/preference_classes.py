@@ -17,7 +17,7 @@
 import numpy as np
 from gurobipy import *
 import sys
-from gurobi_functions import create_mip_model
+from .gurobi_functions import create_mip_model
 
 # this is the *ASSUMED* threshold for the agent being ambivalent
 EPS_ANSWER = 1e-5

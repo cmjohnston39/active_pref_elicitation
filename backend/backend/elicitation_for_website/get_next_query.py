@@ -2,10 +2,10 @@
 import numpy as np
 from gurobipy import *
 
-from gurobi_functions import create_mip_model, optimize
-from preference_classes import robust_utility, Query, is_feasible, Item, User
-from static_elicitation import static_mip_optimal
-from utils import U0_positive_normed
+from .gurobi_functions import create_mip_model, optimize
+from .preference_classes import robust_utility, Query, is_feasible, Item, User
+from .static_elicitation import static_mip_optimal
+from .utils import U0_positive_normed
 from random import randint, uniform
 from time import sleep
 

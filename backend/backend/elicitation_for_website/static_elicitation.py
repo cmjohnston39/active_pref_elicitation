@@ -5,9 +5,9 @@ from scipy.special import comb
 
 import itertools
 
-from gurobi_functions import create_mip_model, optimize, M, TIME_LIM
-from preference_classes import Query, Item
-from utils import U0_polyhedron, get_u0
+from .gurobi_functions import create_mip_model, optimize, M, TIME_LIM
+from .preference_classes import Query, Item
+from .utils import U0_polyhedron, get_u0
 
 class StaticMIPFailed(Exception):
     pass
@@ -318,7 +318,7 @@ def static_mip_optimal(
                 )
 
     m.update()
-    m.write("static_elicitation_single_agent.lp")
+    # m.write("static_elicitation_single_agent.lp")
 
     if log_problem_size and logger is not None:
         logger.info(f"total variables: {m.numvars}")
@@ -334,17 +334,8 @@ def static_mip_optimal(
 
     print("obj value", m.objval)
 
-
     # for i in m.getVars():
     #     print(i,i.x)
-
-    # for i in m.getConstrs():
-    #     # print(i)
-    #     # try:
-    #     print("hi",i, i.Pi)
-        # except AttributeError:
-        #     pass
-    # sys.exit()
 
     if m.status == GRB.TIME_LIMIT:
         time_limit_reached = True
@@ -1431,107 +1422,6 @@ def feasibility_subproblem(z_vec_list,
 
         for i in range(num_items):
             m.addConstr(quicksum(xi_vars[i, k] for k in range(K)) <= gamma_inconsistencies, name="gamma_sum")
-
-        # if K >1:
-        #     xi_vars[0, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[0, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[1, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[1, 1].setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[2, 0].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[2, 1].setAttr("lb", 0.0)
-        #
-        #     xi_vars[3, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[3, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[4, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[4, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[5, 0]. setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[5, 1].setAttr("lb", 0.0)
-        #
-        #     xi_vars[6, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[6, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[7, 0] .setAttr("lb",0.0)
-        #
-        #     xi_vars[7, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[8, 0].setAttr("lb",0.0)
-        #
-        #     xi_vars[8, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[9, 0].setAttr("lb",0.0)
-        #
-        #     xi_vars[9, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[10, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[10, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[11, 0] .setAttr("lb",0.0)
-        #
-        #     xi_vars[11, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[12, 0] .setAttr("lb",0.0)
-        #
-        #     xi_vars[12, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[13, 0] .setAttr("lb",0.0)
-        #
-        #     xi_vars[13, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[14, 0] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[14, 1] .setAttr("lb",0.0)
-        #
-        #     xi_vars[15, 0].setAttr("lb",0.0)
-        #
-        #     xi_vars[15, 1].setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[16, 0].setAttr("lb",0.0)
-        #
-        #     xi_vars[16, 1].setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[17, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[17, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[18, 0] .setAttr("lb",0.034354739434901665)
-        #
-        #     xi_vars[18, 1] .setAttr("lb",0.2219555736740185)
-        #
-        #     xi_vars[19, 0].setAttr("lb",0.0)
-        #
-        #     xi_vars[19, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[20, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[20, 1].setAttr("lb", 0.25631031310892016)
-        #
-        #     xi_vars[21, 0].setAttr("lb", 0.0)
-        #
-        #     xi_vars[21, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[22, 0] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[22, 1] .setAttr("lb",0.0)
-        #
-        #     xi_vars[23, 0] .setAttr("lb", 0.0)
-        #
-        #     xi_vars[23, 1] .setAttr("lb",0.25631031310892016)
-        #
-        #     xi_vars[24, 0] .setAttr("lb",0.0)
-        #
-        #     xi_vars[24, 1] .setAttr("lb",0.25631031310892016)
 
     else:
         xi_vars = np.zeros((num_items, K))
