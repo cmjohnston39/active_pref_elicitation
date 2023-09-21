@@ -69,39 +69,73 @@ class PairwiseComparison extends React.Component {
         // go to next step or end function
         this.next = this.props.next;
 
-        this.sectionInfo =  [{
-          sectionType : "number",
-          columnNums: [0,0],
-          sectionName: "Life Years Saved",
-          sectionDescription: "",
-          toolTipText: 'The metric "life years saved" is based on the life expectancies of those that will recover from COVID-19 under a given policy. Policies with higher life years saved values will, in general, save lives that are younger than those with lower life years saved.'
-        },{
-          sectionType : "plot",
-          plotType : "pie",
-          columnNums: [1,1],
-          sectionName: "Proportion of Patients that Survive",
-          sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
-          toolTipText: ''
-        },
-        {
-            sectionType : "plot",
-            plotType : "bar",
-            columnNums: [9,14],
-            sectionName: "Proportion of Patients that Receive Critical Care by Age Group",
-            sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
-            toolTipText: ''
-          },
-          {
-            sectionType : "plot",
-            plotType : "bar",
-            columnNums: [2,7],
-            sectionName: "Proportion of Patients that Survive by Age Group",
-            sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
-            toolTipText: ''
-          } 
-        ]
-       
+//        this.sectionInfo = [{
+//          sectionType : "number",
+//          columnNums: [7,7],
+//          sectionName: "Life Years Saved",
+//          sectionDescription: ""
+//        },{
+//          sectionType : "plot",
+//          plotType : "pie",
+//          columnNums: [8,8],
+//          sectionName: "Overall Survival Probability",
+//          sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care"
+//        },
+//        {
+//            sectionType : "plot",
+//            plotType : "bar",
+//            columnNums: [0,5],
+//            sectionName: "Chance of Receiving Critical Care by Age Group",
+//            sectionDescription: "Among People Who Need It",
+//          },
+//          {
+//            sectionType : "plot",
+//            plotType : "bar",
+//            columnNums: [9,14],
+//            sectionName: "Survival Probability",
+//            sectionDescription: "Chance of Surviving by Age Group"
+//          }
+//
+//
+//        ]
 
+        this.sectionInfo = [{
+                  sectionType : "number",
+                  columnNums: [1,1],
+                  sectionName: "TreeDepth",
+                  sectionDescription: ""
+                },
+//                {
+//                  sectionType : "plot",
+//                  plotType : "pie",
+//                  columnNums: [8,8],
+//                  sectionName: "Overall Survival Probability",
+//                  sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care"
+//                },
+                {
+                    sectionType : "plot",
+                    plotType : "bar",
+                    columnNums: [11,14],
+                    sectionName: "Conditional Average Treatment Effect (Race)",
+//                    sectionDescription: "Among People Who Need It",
+                  },
+                  {
+                    sectionType : "plot",
+                    plotType : "bar",
+                    columnNums: [15,17],
+                    sectionName: "Conditional Average Treatment Effect (Gender)",
+                    sectionDescription: "Chance of Surviving by Age Group"
+                  },
+                  {
+                    sectionType : "plot",
+                    plotType : "bar",
+                    columnNums: [18,21],
+                    sectionName: "Conditional Average Treatment Effect (Age)",
+                    sectionDescription: "Chance of Surviving by Age Group"
+                  }
+
+
+                ]
     }
 
     pushBackChoice(selected){
