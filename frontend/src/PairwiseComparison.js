@@ -101,8 +101,8 @@ class PairwiseComparison extends React.Component {
 
         this.sectionInfo = [{
                   sectionType : "number",
-                  columnNums: [1,1],
-                  sectionName: "TreeDepth",
+                  columnNums: [10,10],
+                  sectionName: "NumBranchingFeatures",
                   sectionDescription: ""
                 },
 //                {
@@ -112,10 +112,17 @@ class PairwiseComparison extends React.Component {
 //                  sectionName: "Overall Survival Probability",
 //                  sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care"
 //                },
+                    {
+                    sectionType : "plot",
+                    plotType : "bar",
+                    columnNums: [11,11],
+                    sectionName: "Average Treatment Effect",
+//                    sectionDescription: "Among People Who Need It",
+                  },
                 {
                     sectionType : "plot",
                     plotType : "bar",
-                    columnNums: [11,14],
+                    columnNums: [12,14],
                     sectionName: "Conditional Average Treatment Effect (Race)",
 //                    sectionDescription: "Among People Who Need It",
                   },
@@ -124,14 +131,14 @@ class PairwiseComparison extends React.Component {
                     plotType : "bar",
                     columnNums: [15,17],
                     sectionName: "Conditional Average Treatment Effect (Gender)",
-                    sectionDescription: "Chance of Surviving by Age Group"
+                    //sectionDescription: "Chance of Surviving by Age Group"
                   },
                   {
                     sectionType : "plot",
                     plotType : "bar",
                     columnNums: [18,21],
                     sectionName: "Conditional Average Treatment Effect (Age)",
-                    sectionDescription: "Chance of Surviving by Age Group"
+                    //sectionDescription: "Chance of Surviving by Age Group"
                   }
 
 
