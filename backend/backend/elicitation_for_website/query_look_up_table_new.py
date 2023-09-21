@@ -4,7 +4,7 @@ import os
 
 from get_next_query import find_optimal_query_mip, find_optimal_query
 from preference_classes import Query
-from data_functions import get_data_items
+from data_functions import get_data_items, get_data_items_LAHSA
 from utils import get_gamma ,get_logger, generate_filepath, U0_positive_normed
 from static_elicitation import feasibility_subproblem
 
@@ -34,9 +34,11 @@ def create_query_lookup_table(args):
 
     agents=[1]
 
-    items = get_data_items(
-        args.input_csv,
+    items = get_data_items_LAHSA(
+        args.input_csv, standardize_features=True
         )
+    for i in items:
+        print("items are", i.features)
 
     valid_responses=[-1,0, 1]
 
@@ -239,7 +241,7 @@ def main():
         arg_str += " --sigma 0.1"
         arg_str += " --confidence-level 0.9"
         arg_str += " --output-dir ./hi"
-        arg_str += " --input-csv ../data/COVID/UK_6781beds-25policies_normalized_0_1.csv"
+        arg_str += " --input-csv ../LAHSA/COVID/AdultHMIS_20210922_preprocessed_final_Robust_edit.csv"
         arg_str += " --fair-type sum"
         arg_str += " --partworth"
         # arg_str += " --same-query-num"
