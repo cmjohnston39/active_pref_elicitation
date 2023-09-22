@@ -1,0 +1,7 @@
+[2023-09-21 11:25:28,702] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 0
+[2023-09-21 11:25:42,070] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 1
+[2023-09-21 11:26:06,308] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 2
+[2023-09-21 11:26:20,156] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 3
+[2023-09-21 11:26:36,839] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 4
+[2023-09-21 11:27:00,077] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 5
+[2023-09-21 11:27:15,460] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 6

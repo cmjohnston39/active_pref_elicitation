@@ -16,7 +16,7 @@ def create_query_lookup_table(args):
     """
 
     file_str = args.input_csv[1:-30] + "_K" + str(args.max_K) + "_p" + str(args.confidence_level) + "_" + str(
-        args.problem_type)
+        args.problem_type) + "_start" + str(args.first_response)
 
     print(file_str)
 
@@ -43,6 +43,17 @@ def create_query_lookup_table(args):
     print("total number of items", len(items))
 
     valid_responses=[-1,0, 1]
+
+    first_response = args.first_response
+
+    print("first resposne is", first_response)
+    print("args first resposne is", args.first_response)
+    if type(first_response[0]) == list:
+        first_response = first_response[0]
+        args.first_response=args.first_response[0]
+
+    print("first resposne now is", first_response)
+    print("args first resposne now is", args.first_response)
 
 
     lookup= {}
@@ -87,35 +98,27 @@ def create_query_lookup_table(args):
 
         if len(answered_queries) != args.max_K - 1:
             small= 1000
-            for s in valid_responses:
-                # print("s is", s)
-                answered_queries.append(Query(item_a_opt, item_b_opt, response=s))
+
+            print("len",len(args.first_response))
+            print(args.first_response)
+
+            if args.first_response == None or (count > len(args.first_response) -1):
+                for s in valid_responses:
+                    # print("s is", s)
+                    answered_queries.append(Query(item_a_opt, item_b_opt, response=s))
+                    # print("answere queries", [(q.item_A.id, q.item_B.id,q.response) for q in answered_queries])
+                    query_list.append(answered_queries)
+                    answered_queries=answered_queries[:-1] #remove just added new query
+
+
+            else:
+                answered_queries.append(Query(item_a_opt, item_b_opt, response=first_response[0]))
                 # print("answere queries", [(q.item_A.id, q.item_B.id,q.response) for q in answered_queries])
                 query_list.append(answered_queries)
-
-                # B_mat, b_vec = U0_positive_normed(len(items[0].features))
-                #
-                # s_opt, objval = feasibility_subproblem([q.z for q in answered_queries],
-                #                                        valid_responses,
-                #                                        len(answered_queries),
-                #                                        items,
-                #                                        eps=0,
-                #                                        B_mat=B_mat,
-                #                                        b_vec=b_vec,
-                #                                        gamma_inconsistencies=gamma,
-                #                                        fixed_responses=[q.response for q in answered_queries],
-                #                                        verbose=False)
-                # if objval < small:
-                #     small = objval
-                #
-                # print("feas objval is", objval)
-
-
-                answered_queries=answered_queries[:-1] #remove just added new query
-
-                # print(items[0])
-            # assert (abs(small - objval_opt) < 1e-3)
-
+                answered_queries = answered_queries[:-1]  # remove just added new query
+                print("first response before", first_response)
+                first_response=first_response[1:] #get rid of first response we've already processed
+                print("first response after", first_response)
 
 
         # for q in query_list:
@@ -161,12 +164,20 @@ def create_query_lookup_table(args):
     pickle.dump(lookup, open(output_file, "wb"))
 
 def main():
+    def list_of_ints(arg):
+        return list(map(int, arg.split(',')))
+
     parser = argparse.ArgumentParser(
         description="static experiment comparing optimal heuristic to random "
     )
 
     parser.add_argument(
         "--max-K", type=int, help="total number of queries to ask", default=5
+    )
+
+    parser.add_argument(
+        "--first-response", type=list_of_ints, nargs="+",help="elements of {-1,1,0} separated by commas, e.g. 1,-1,0"
+                                                    " which will be first response(s) in list (to parallelize)", default=None
     )
 
     parser.add_argument(
@@ -228,7 +239,7 @@ def main():
         "--DEBUG",
         action="store_true",
         help="if set, use a fixed arg string. otherwise, parse args.",
-        default=True,
+        default=False,
     )
 
     args = parser.parse_args()
@@ -237,7 +248,7 @@ def main():
 
     if args.DEBUG:
         # fixed set of parameters, for debugging:
-        arg_str = "--max-K 3"
+        arg_str = "--max-K 4"
         arg_str += " --u0-type box"
         arg_str += " --problem-type maximin"
         arg_str += " --sigma 0.1"
@@ -246,6 +257,7 @@ def main():
         arg_str += " --input-csv ../data/LAHSA/AdultHMIS_20210922_preprocessed_final_Robust_edit.csv"
         arg_str += " --fair-type sum"
         arg_str += " --partworth"
+        arg_str += " --first-response=1,-1"
         # arg_str += " --same-query-num"
 
         args_fixed = parser.parse_args(arg_str.split())

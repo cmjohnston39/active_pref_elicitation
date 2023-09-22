@@ -92,7 +92,10 @@ def get_data_items_LAHSA(filename, max_items=99999, standardize_features=False, 
     if "UsesProtectedFeatures" in df.columns.to_list():
         drop_cols = ["Id", "PolicyName", "Policy", "NumFeatures", "UsesProtectedFeatures"]
     else:
-        drop_cols = ["Approach", "TrainingFile", "NumDatapoints", "TreeDepth", "BranchingLimit", "TimeLimit", "ProbTypePred", "SolverStatus", "ObjVal", "MIPGap", "SolvingTime", "NumBranchingNodes"]
+        #drop_cols = ["Approach", "TrainingFile", "NumDatapoints", "TreeDepth", "BranchingLimit", "TimeLimit",
+    # "ProbTypePred", "SolverStatus", "ObjVal", "MIPGap", "SolvingTime", "NumBranchingNodes"]
+        drop_cols = ["Approach", "NumDatapoints", "TreeDepth", "BranchingLimit", "TimeLimit", "SolverStatus", "ObjVal",
+                     "MIPGap", "SolvingTime", "NumBranchingNodes"]
     df.drop(columns=drop_cols, inplace=True)
 
     # df["NumBranchingFeatures"] = -df["NumBranchingFeatures"]
@@ -101,6 +104,8 @@ def get_data_items_LAHSA(filename, max_items=99999, standardize_features=False, 
     items = []
     for i, row in df.iterrows():
         items.append(Item(row.values, i))
+
+        # print("before stand", row.values)
 
     if len(items) > max_items:
         items = items[:max_items]

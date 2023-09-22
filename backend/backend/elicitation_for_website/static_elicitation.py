@@ -5,9 +5,9 @@ from scipy.special import comb
 
 import itertools
 
-from .gurobi_functions import create_mip_model, optimize, M, TIME_LIM
-from .preference_classes import Query, Item
-from .utils import U0_polyhedron, get_u0
+from gurobi_functions import create_mip_model, optimize, M, TIME_LIM
+from preference_classes import Query, Item
+from utils import U0_polyhedron, get_u0
 
 class StaticMIPFailed(Exception):
     pass
@@ -236,6 +236,12 @@ def static_mip_optimal(
         cut_2=cut_2,
         fixed_queries=fixed_queries,
     )
+
+    # if K ==2:
+    #     p_vars[2,1].setAttr("lb",0.0)
+    #     p_vars[2,1].setAttr("ub",0.0)
+    #     q_vars[42,1].setAttr("lb",0.0)
+    #     q_vars[42, 1].setAttr("ub", 0.0)
 
     # now add continuous variables for each response scenario
     if problem_type == "maximin":

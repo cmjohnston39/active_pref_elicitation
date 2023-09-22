@@ -1,0 +1,3 @@
+[2023-09-21 11:20:23,954] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 0
+[2023-09-21 11:20:36,441] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 1
+[2023-09-21 11:20:46,587] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 2

@@ -1,0 +1,1524 @@
+
+Inactive Modules:
+  1) openblas/0.3.21     2) openmpi/4.1.4     3) pmix/3.2.3
+
+The following have been reloaded with a version change:
+  1) gcc/11.3.0 => gcc/8.3.0
+
+[2023-09-21 16:58:35,474] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 0
+args are Namespace(max_K=10, first_response=[[-1, -1]], sigma=0.1, confidence_level=0.9, output_dir='./hi', u0_type='box', problem_type='maximin', same_query_num=False, fair_type='sum', input_csv='../data/LAHSA/AdultHMIS_20210922_preprocessed_final_Robust_edit.csv', partworth=True, DEBUG=False)
+./data/LAHSA/AdultHMIS_20210922_prep_K10_p0.9_maximin_start[[-1, -1]]
+items are [0.06796277 0.55901699 0.26141578 0.24243278 0.26313059 0.2139263
+ 0.42791028 0.16627802 0.04144197 0.14802869 0.12898937 0.22709041
+ 0.26141578 0.39564264 0.38438749 0.30255041]
+items are [ 1.59712502  0.55901699  0.16634502  0.21666514  0.09141413  0.10711426
+  0.08737468  0.18000495 -0.09756431  0.05231212  0.04662872  0.10839846
+  0.16634502  0.21040575  0.37500031  0.21437574]
+items are [ 1.08740427 -1.11803399  0.17734194  0.01160184 -0.09034817  2.90159251
+  0.10754158  0.18584505 -0.06476167  0.06296909  0.06248461  0.11332695
+  0.17734194  0.01433203  0.39836468  0.22457499]
+items are [-1.46119948  0.55901699  0.28130023  0.34639646  0.18372761  0.16225215
+  0.07373759  0.32920241  0.29332886  0.79474728  0.68634938  0.49473807
+  0.28130023  0.30998772  0.35911089  0.32099251]
+items are [-1.46119948  0.55901699  0.21073504  0.25868458  0.13510701  0.14274444
+  0.03984035  0.24304243  1.22126323  0.11778403  0.13708397  0.16333564
+  0.21073504  0.25753887  0.31961513  0.25554587]
+items are [ 0.57768352 -1.11803399  0.25720791 -0.55943776  1.13076399  1.17338215
+  0.15768852  0.26782842  0.01336748  0.1448185   0.19729043  0.21697663
+  0.25720791 -0.22532767  0.45692731  0.29864777]
+items are [0.06796277 0.55901699 0.35890837 0.38510193 0.31445036 0.16997167
+ 0.7515952  0.16256976 0.15380972 0.21416483 0.32079424 0.33510153
+ 0.35890837 0.45100318 0.38173859 0.39297124]
+items are [ 0.06796277  0.55901699  0.2827407   0.39354768  0.15673616 -0.01941225
+  0.11836195  0.31290573  0.34814021  0.3229678   0.28293482  0.23254371
+  0.2827407   0.28087104  0.4111055   0.3223285 ]
+items are [-1.46119948  0.55901699  0.40765621  0.49785288  0.23525266  0.44976168
+  0.38314234  0.37073364  0.14167779  0.958453    0.84628858  0.57261715
+  0.40765621  0.36556969  0.5304349   0.43818308]
+items are [0.06796277 0.55901699 0.34168523 0.36538723 0.27853829 0.29413397
+ 0.76331469 0.13193024 0.558342   0.1276132  0.21933301 0.30395826
+ 0.34168523 0.4122635  0.35985207 0.3769974 ]
+items are [1.08740427 0.55901699 0.32388323 0.38718067 0.21148028 0.27635914
+ 0.38044502 0.2645769  0.10758319 0.34880051 0.43497893 0.35781772
+ 0.32388323 0.33992555 0.45460467 0.3604867 ]
+items are [1.08740427 0.55901699 0.21818335 0.18933283 0.24497546 0.128452
+ 0.44474048 0.10289534 0.16951325 0.05401105 0.12044076 0.16053258
+ 0.21818335 0.37605803 0.33911176 0.2624539 ]
+items are [-1.46119948  0.55901699  0.32718492  0.48672693  0.1401715  -0.01903852
+ -0.03695361  0.43406227  0.05986143  0.26770652  0.2480642   0.27020557
+  0.32718492  0.26300212  0.23013774  0.36354889]
+items are [-0.95147873 -1.11803399  0.3251721   0.38589671  0.18827698  0.44096397
+  0.46281726  0.22969926  0.52364452  1.50997132  0.75106393  0.47400668
+  0.3251721   0.31489529  0.42969075  0.36168207]
+items are [ 0.57768352 -1.11803399  0.16634502  0.21666514  0.09141413  0.10711426
+  0.08737468  0.18000495 -0.09756431  0.05231212  0.04662872  0.10839846
+  0.16634502  0.21040575  0.37500031  0.21437574]
+items are [0.06796277 0.55901699 0.20438478 0.22857279 0.08053428 0.60725511
+ 0.12080535 0.21448032 0.02304324 0.04813584 0.07321787 0.12086152
+ 0.20438478 0.19866925 0.41395245 0.24965623]
+items are [0.06796277 0.55901699 0.35532051 0.42109367 0.22049634 0.39918411
+ 0.00099076 0.44836049 0.76945318 0.35369287 0.49800034 0.39383035
+ 0.35532051 0.3496515  0.27434907 0.38964363]
+items are [-1.46119948 -1.11803399  0.28547266  0.33065293  0.23710783  0.02557895
+  0.080281    0.33486583 -0.00635745  1.38089476  1.06833415  0.58583717
+  0.28547266  0.36757093  0.36673503  0.32486229]
+items are [0.06796277 0.55901699 0.40577508 0.19963761 0.66767963 0.15455805
+ 1.21247724 0.03678109 0.5690451  0.28302461 0.30980187 0.32747631
+ 0.40577508 0.46641211 0.29188482 0.4364384 ]
+items are [0.06796277 0.55901699 0.23088753 0.23700628 0.23059194 0.02446414
+ 0.38644446 0.14226456 0.16492057 0.08677758 0.14977747 0.20358674
+ 0.23088753 0.360542   0.36723412 0.27423657]
+items are [ 1.08740427  0.55901699  0.17639137  0.16720566  0.17767464  0.11587148
+  0.10726177  0.18557531 -0.15188305  0.13090885  0.02659007  0.1062875
+  0.17639137  0.30345815  0.39817199  0.22369337]
+items are [ 1.08740427  0.55901699  0.17431319  0.22028891  0.10419136  0.11438928
+  0.1530687   0.1669319  -0.37057076  0.02805713  0.07227924  0.12801922
+  0.17431319  0.22418902  0.38485457  0.22176594]
+items are [-0.95147873 -1.11803399  0.49484806  0.43646619  0.57492359  0.12341138
+  1.44264775  0.05149592  1.47847221  0.2251186   0.3330536   0.3751001
+  0.49484806  0.68223224  0.30239596  0.51905035]
+items are [-1.46119948  0.55901699  0.34752423  0.48825487  0.13194002  0.29966212
+  0.22086145  0.35528191  0.38223918  0.44402173  0.48020677  0.37528123
+  0.34752423  0.25412252  0.51939737  0.38241286]
+items are [ 0.57768352  0.55901699  0.39510084  0.6569584   0.06744951  0.04817768
+ -0.15054908  0.56816873 -0.15448587  0.90634697  0.90375839  0.69414561
+  0.39510084  0.18455422  0.09778064  0.42653843]
+items are [ 1.59712502  0.55901699 -3.57979962 -3.50432924 -3.32926297 -3.13440854
+ -2.36476532 -3.63594265 -2.72975444 -2.85851082 -3.30631368 -3.49178843
+ -3.57979962 -3.47960515 -2.48213949 -3.26003688]
+items are [ 1.59712502  0.55901699 -3.78212582 -3.66163359 -3.56994665 -3.31361401
+ -2.89424693 -3.6804345  -3.37526968 -3.20370222 -3.60807302 -3.73754432
+ -3.78212582 -3.73923954 -3.17103116 -3.44768706]
+items are [-1.46119948 -4.47213595 -3.80519579 -3.67880661 -3.59826953 -3.33470232
+ -2.95600655 -3.68567015 -3.37526968 -3.24379867 -3.64295849 -3.7657842
+ -3.80519579 -3.76979247 -3.17103116 -3.46908362]
+items are [ 0.06796277  0.55901699  0.19872984  0.18821206  0.16448961  0.34241463
+  0.16811688  0.18891898 -0.01604523  0.0815277   0.02409966  0.10451568
+  0.19872984  0.28923497  0.40056045  0.24441149]
+items are [ 0.06796277 -1.11803399  0.25635096  0.4110895   0.00700838  0.36418309
+  0.0239184   0.31194713  0.80070814  0.12722865  0.18030229  0.19234397
+  0.25635096  0.11935414  0.30106348  0.29785298]
+items are [ 1.08740427  0.55901699  0.36301432  0.37173936  0.3428124   0.16178149
+  1.33698892 -0.05676612 -0.52048411  0.3923423   0.37748239  0.3297464
+  0.36301432  0.48159836  0.22506187  0.39677935]
+items are [ 1.08740427  0.55901699  0.1721548   0.22065898  0.06411642  0.31812529
+  0.09269435  0.18529917 -0.09088768  0.1003781   0.14087342  0.13298782
+  0.1721548   0.1809587   0.38119859  0.2197641 ]
+items are [-1.46119948  0.55901699  0.17139482  0.19595392  0.11754696  0.18140316
+  0.2100169   0.1328408   0.44465529 -0.00836128  0.00773428  0.08914866
+  0.17139482  0.23859619  0.3605025   0.21905926]
+items are [-0.95147873 -1.11803399  0.15176835  0.38559304 -0.10893711 -0.20559676
+ -1.74940002  0.89794461 -1.29075905 -2.60881367 -0.97368558 -0.2262293
+  0.15176835 -0.00572055 -1.76513936 -2.48374403]
+items are [ 0.57768352 -1.11803399 -0.06360294  0.10397847 -0.20839145 -0.44745568
+ -2.95600655  1.0756635   1.00521661 -0.48736354 -0.41560809 -0.16368563
+ -0.06360294 -0.11300562 -3.17103116 -0.0186483 ]
+items are [ 0.06796277 -1.11803399  0.32489136 -0.97384881  2.17133696 -0.85713442
+  0.5751617   0.18310542  0.71865161  0.15218361  0.20326415  0.2399691
+  0.32489136 -0.6029774   0.39640769  0.3614217 ]
+items are [ 0.06796277  0.55901699  0.40038783  0.41819999  0.33853865  0.34924067
+  1.34022869 -0.00456154 -1.0910564   0.48123512  0.51391446  0.37969616
+  0.40038783  0.4769881  -0.34732193  0.43144192]
+items are [-1.46119948e+00 -1.11803399e+00  1.58907934e-01  1.21629901e-01
+  1.75222761e-01  2.36924826e-01 -7.30593930e-02  2.32853677e-01
+  8.42615717e-05  7.96333878e-01  8.60349631e-01  9.40123374e-01
+  1.58907934e-01  3.00813217e-01  1.88068661e-01  2.07478120e-01]
+items are [ 0.06796277  0.55901699  0.28090655  0.38859964  0.13290038  0.13369704
+ -0.10251867  0.40354792 -0.25274685  0.17181123  0.17098853  0.2326226
+  0.28090655  0.2551585   0.15374384  0.32062739]
+items are [ 0.06796277  0.55901699  0.12789908  0.15054088  0.14023316 -0.20755321
+  0.15419181  0.10094456  0.24705052 -0.22736351 -0.18517047  0.00660473
+  0.12789908  0.26306865  0.33771828  0.17871854]
+items are [ 1.08740427  0.55901699  0.18627614  0.23559193  0.11094551  0.12316417
+  0.11326394  0.19536569 -0.09688626  0.0788042   0.06933941  0.1293295
+  0.18627614  0.23147497  0.40516549  0.23286113]
+items are [1.08740427 0.55901699 0.34604047 0.4308846  0.24425308 0.05547463
+ 0.37626589 0.28759992 0.84103482 0.26132406 0.29397349 0.32180756
+ 0.34604047 0.37527877 0.47105055 0.38103673]
+items are [-1.46119948 -1.11803399  0.25989639  0.18575716  0.31826066  0.30135556
+  0.55615535  0.10321313  1.12859053  0.28922218  0.17971488  0.21720846
+  0.25989639  0.45376295  0.33933877  0.30114123]
+items are [-0.95147873  0.55901699  0.35876743  0.42437774  0.23573029  0.33191557
+  0.2176391   0.36561626  0.93932054  0.39185074  0.35470597  0.32502213
+  0.35876743  0.36608493  0.52677943  0.39284052]
+items are [0.57768352 0.55901699 0.29721462 0.37563871 0.18373237 0.15891475
+ 0.10814109 0.33272877 0.63788737 0.25003295 0.31069331 0.29443214
+ 0.29721462 0.30999285 0.39919653 0.33575253]
+total number of items 45
+first resposne is [[-1, -1]]
+args first resposne is [[-1, -1]]
+first resposne now is [-1, -1]
+args first resposne now is [-1, -1]
+processing num: 0 
+
+gamma is 0.18123876048736468
+Set parameter TokenServer to value "hpc-licenses.hpcc.usc.edu"
+[2023-09-21 16:58:57,685] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 1
+[2023-09-21 16:59:17,677] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 2
+[2023-09-21 16:59:39,775] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 3
+[2023-09-21 16:59:59,457] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 4
+[2023-09-21 17:00:33,764] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 5
+[2023-09-21 17:00:57,342] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 6
+[2023-09-21 17:01:19,351] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 7
+[2023-09-21 17:01:39,779] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 8
+[2023-09-21 17:01:59,550] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 9
+[2023-09-21 17:02:28,724] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 10
+[2023-09-21 17:03:01,932] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 11
+[2023-09-21 17:03:30,274] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 12
+[2023-09-21 17:03:52,720] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 13
+[2023-09-21 17:04:26,219] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 14
+[2023-09-21 17:04:49,400] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 15
+[2023-09-21 17:05:18,246] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 16
+[2023-09-21 17:05:55,171] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 17
+[2023-09-21 17:06:24,041] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 18
+[2023-09-21 17:06:42,200] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 19
+[2023-09-21 17:07:12,332] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 20
+[2023-09-21 17:07:38,173] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 21
+[2023-09-21 17:08:00,297] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 22
+[2023-09-21 17:08:20,613] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 23
+[2023-09-21 17:08:37,718] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 24
+[2023-09-21 17:09:10,410] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 25
+[2023-09-21 17:09:39,136] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 26
+[2023-09-21 17:10:10,424] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 27
+[2023-09-21 17:10:54,550] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 28
+[2023-09-21 17:11:28,346] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 29
+[2023-09-21 17:11:57,156] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 30
+[2023-09-21 17:12:30,415] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 31
+[2023-09-21 17:13:05,369] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 32
+[2023-09-21 17:13:30,928] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 33
+[2023-09-21 17:13:58,867] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 34
+[2023-09-21 17:14:28,696] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 35
+[2023-09-21 17:14:53,621] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 36
+[2023-09-21 17:15:23,924] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 37
+[2023-09-21 17:15:55,069] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 38
+[2023-09-21 17:16:22,624] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 39
+[2023-09-21 17:16:52,885] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 40
+[2023-09-21 17:17:25,537] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 41
+[2023-09-21 17:17:55,200] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 42
+[2023-09-21 17:18:20,284] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 43
+[2023-09-21 17:18:43,748] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 44
+[2023-09-21 17:19:08,590] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 45
+[2023-09-21 17:19:37,097] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 46
+[2023-09-21 17:20:03,342] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 47
+[2023-09-21 17:20:30,368] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 48
+[2023-09-21 17:21:02,837] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 49
+[2023-09-21 17:21:35,526] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 50
+[2023-09-21 17:22:08,640] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 51
+[2023-09-21 17:22:43,844] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 52
+[2023-09-21 17:23:11,508] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 53
+[2023-09-21 17:23:35,254] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 54
+[2023-09-21 17:23:54,170] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 55
+[2023-09-21 17:24:23,279] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 56
+[2023-09-21 17:24:49,344] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 57
+[2023-09-21 17:25:19,906] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 58
+[2023-09-21 17:25:40,501] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 59
+[2023-09-21 17:26:03,037] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 60
+[2023-09-21 17:26:25,193] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 61
+[2023-09-21 17:26:44,953] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 62
+[2023-09-21 17:27:06,174] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 63
+[2023-09-21 17:27:35,619] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 64
+[2023-09-21 17:28:04,608] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 65
+[2023-09-21 17:28:22,680] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 66
+[2023-09-21 17:28:41,103] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 67
+[2023-09-21 17:29:01,034] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 68
+[2023-09-21 17:29:14,898] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 69
+[2023-09-21 17:29:41,272] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 70
+[2023-09-21 17:30:06,101] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 71
+[2023-09-21 17:30:39,573] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 72
+[2023-09-21 17:31:06,074] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 73
+[2023-09-21 17:31:33,948] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 74
+[2023-09-21 17:31:58,879] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 75
+[2023-09-21 17:32:23,334] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 76
+[2023-09-21 17:32:48,131] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 77
+[2023-09-21 17:33:11,501] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 78
+[2023-09-21 17:33:42,092] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 79
+[2023-09-21 17:34:13,054] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 80
+[2023-09-21 17:34:47,071] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 81
+[2023-09-21 17:35:08,187] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 82
+[2023-09-21 17:35:33,305] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 83
+[2023-09-21 17:36:06,838] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 84
+[2023-09-21 17:36:28,989] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 85
+[2023-09-21 17:36:55,343] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 86
+[2023-09-21 17:37:23,045] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 87
+[2023-09-21 17:37:58,972] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 88
+[2023-09-21 17:38:40,099] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 89
+[2023-09-21 17:39:13,243] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 90
+[2023-09-21 17:40:00,332] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 91
+[2023-09-21 17:40:35,715] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 92
+[2023-09-21 17:41:09,907] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 93
+[2023-09-21 17:41:35,007] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 94
+[2023-09-21 17:42:08,544] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 95
+[2023-09-21 17:42:39,028] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 96
+[2023-09-21 17:43:01,666] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 97
+[2023-09-21 17:43:24,625] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 98
+[2023-09-21 17:43:51,652] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 99
+[2023-09-21 17:44:20,687] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 100
+[2023-09-21 17:44:47,892] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 101
+[2023-09-21 17:45:12,747] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 102
+[2023-09-21 17:45:37,427] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 103
+[2023-09-21 17:46:08,178] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 104
+[2023-09-21 17:46:32,042] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 105
+[2023-09-21 17:47:02,388] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 106
+[2023-09-21 17:47:33,873] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 107
+[2023-09-21 17:48:07,486] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 108
+[2023-09-21 17:48:31,957] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 109
+[2023-09-21 17:48:54,041] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 110
+[2023-09-21 17:49:20,739] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 111
+[2023-09-21 17:49:41,110] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 112
+[2023-09-21 17:50:02,393] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 113
+[2023-09-21 17:50:30,121] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 114
+[2023-09-21 17:50:58,680] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 115
+[2023-09-21 17:51:25,296] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 116
+[2023-09-21 17:51:48,358] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 117
+[2023-09-21 17:52:24,107] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 118
+[2023-09-21 17:53:00,272] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 119
+[2023-09-21 17:53:29,960] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 120
+[2023-09-21 17:53:52,301] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 121
+[2023-09-21 17:54:31,097] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 122
+[2023-09-21 17:55:01,921] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 123
+[2023-09-21 17:55:28,302] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 124
+[2023-09-21 17:55:53,291] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 125
+[2023-09-21 17:56:17,297] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 126
+[2023-09-21 17:56:38,142] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 127
+[2023-09-21 17:57:08,124] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 128
+[2023-09-21 17:57:33,493] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 129
+[2023-09-21 17:57:51,490] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 130
+[2023-09-21 17:58:12,028] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 131
+[2023-09-21 17:58:32,625] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 132
+[2023-09-21 17:58:54,087] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 133
+[2023-09-21 17:59:14,266] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 134
+[2023-09-21 17:59:49,575] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 135
+[2023-09-21 18:00:14,082] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 136
+[2023-09-21 18:00:36,586] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 137
+[2023-09-21 18:01:05,576] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 138
+[2023-09-21 18:01:29,920] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 139
+[2023-09-21 18:01:56,786] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 140
+[2023-09-21 18:02:26,318] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 141
+[2023-09-21 18:02:50,560] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 142
+[2023-09-21 18:03:17,331] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 143
+[2023-09-21 18:03:42,157] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 144
+[2023-09-21 18:04:04,182] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 145
+[2023-09-21 18:04:25,707] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 146
+[2023-09-21 18:04:56,570] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 147
+[2023-09-21 18:05:17,261] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 148
+[2023-09-21 18:05:46,350] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 149
+[2023-09-21 18:06:12,527] [query_look_up_table_new_fix_first_response.py:create_query_lookup_table] : response number: 150
+obj value 0.19075130448219083
+() : (4, 30)
+len 2
+[-1, -1]
+first response before [-1, -1]
+first response after [-1]
+processing num: 1 
+
+aq [(4, 30, -1)]
+gamma is 0.25631031310892016
+obj value 0.20121335102095
+((4, 30, -1),) : (2, 42)
+len 2
+[-1, -1]
+first response before [-1]
+first response after []
+processing num: 2 
+
+aq [(4, 30, -1), (2, 42, -1)]
+gamma is 0.3139147414649223
+obj value 0.20364958644140962
+((4, 30, -1), (2, 42, -1)) : (2, 22)
+len 2
+[-1, -1]
+processing num: 3 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1)]
+gamma is 0.36247752097472935
+obj value 0.2022287583946621
+((4, 30, -1), (2, 42, -1), (2, 22, -1)) : (0, 2)
+len 2
+[-1, -1]
+processing num: 4 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0)]
+gamma is 0.36247752097472935
+obj value 0.21054913521452243
+((4, 30, -1), (2, 42, -1), (2, 22, 0)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 5 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1)]
+gamma is 0.36247752097472935
+obj value 0.21054913521452243
+((4, 30, -1), (2, 42, -1), (2, 22, 1)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 6 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1)]
+gamma is 0.4052621886075503
+obj value 0.2017521148284153
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1)) : (36, 42)
+len 2
+[-1, -1]
+processing num: 7 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0)]
+gamma is 0.4052621886075503
+obj value 0.2078281488021567
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0)) : (0, 19)
+len 2
+[-1, -1]
+processing num: 8 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1)]
+gamma is 0.4052621886075503
+obj value 0.20782814868106433
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1)) : (1, 2)
+len 2
+[-1, -1]
+processing num: 9 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1)]
+gamma is 0.4052621886075503
+obj value 0.21782224921285145
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1)) : (29, 30)
+len 2
+[-1, -1]
+processing num: 10 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0)]
+gamma is 0.4052621886075503
+obj value 0.2178222492128514
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0)) : (29, 30)
+len 2
+[-1, -1]
+processing num: 11 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1)]
+gamma is 0.4052621886075503
+obj value 0.21459382601038055
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1)) : (30, 42)
+len 2
+[-1, -1]
+processing num: 12 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1)]
+gamma is 0.4052621886075503
+obj value 0.21782224921285145
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1)) : (29, 30)
+len 2
+[-1, -1]
+processing num: 13 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0)]
+gamma is 0.4052621886075503
+obj value 0.21782224921285145
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0)) : (29, 30)
+len 2
+[-1, -1]
+processing num: 14 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1)]
+gamma is 0.4052621886075503
+obj value 0.21459382613183994
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1)) : (30, 42)
+len 2
+[-1, -1]
+processing num: 15 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1)]
+gamma is 0.44394248480853693
+obj value 0.20062524562579787
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1)) : (1, 2)
+len 2
+[-1, -1]
+processing num: 16 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0)]
+gamma is 0.44394248480853693
+obj value 0.20478511056980978
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0)) : (2, 43)
+len 2
+[-1, -1]
+processing num: 17 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1)]
+gamma is 0.44394248480853693
+obj value 0.20478511056980978
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1)) : (2, 43)
+len 2
+[-1, -1]
+processing num: 18 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1)]
+gamma is 0.44394248480853693
+obj value 0.20856233582716624
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 19 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0)]
+gamma is 0.44394248480853693
+obj value 0.208562363730925
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0)) : (0, 4)
+len 2
+[-1, -1]
+processing num: 20 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1)]
+gamma is 0.44394248480853693
+obj value 0.20704207340778005
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1)) : (1, 2)
+len 2
+[-1, -1]
+processing num: 21 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1)]
+gamma is 0.44394248480853693
+obj value 0.20704197958989068
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1)) : (1, 3)
+len 2
+[-1, -1]
+processing num: 22 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0)]
+gamma is 0.44394248480853693
+obj value 0.21522956240912144
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0)) : (11, 13)
+len 2
+[-1, -1]
+processing num: 23 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1)]
+gamma is 0.44394248480853693
+obj value 0.2152281958349795
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 24 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1)]
+gamma is 0.44394248480853693
+obj value 0.2144238048049104
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1)) : (32, 34)
+len 2
+[-1, -1]
+processing num: 25 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0)]
+gamma is 0.44394248480853693
+obj value 0.228562372119949
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 26 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1)]
+gamma is 0.44394248480853693
+obj value 0.2260159976063074
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 27 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1)]
+gamma is 0.44394248480853693
+obj value 0.21443708046173393
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1)) : (8, 24)
+len 2
+[-1, -1]
+processing num: 28 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0)]
+gamma is 0.44394248480853693
+obj value 0.23097012561637825
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 29 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1)]
+gamma is 0.44394248480853693
+obj value 0.22965142550048637
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1)) : (16, 21)
+len 2
+[-1, -1]
+processing num: 30 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1)]
+gamma is 0.44394248480853693
+obj value 0.21436894873423346
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1)) : (10, 42)
+len 2
+[-1, -1]
+processing num: 31 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0)]
+gamma is 0.44394248480853693
+obj value 0.2167388253203954
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0)) : (1, 4)
+len 2
+[-1, -1]
+processing num: 32 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1)]
+gamma is 0.44394248480853693
+obj value 0.21343521346016792
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1)) : (4, 10)
+len 2
+[-1, -1]
+processing num: 33 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1)]
+gamma is 0.44394248480853693
+obj value 0.21442380480491047
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1)) : (32, 34)
+len 2
+[-1, -1]
+processing num: 34 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0)]
+gamma is 0.44394248480853693
+obj value 0.228562372119949
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 35 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1)]
+gamma is 0.44394248480853693
+obj value 0.2260159976063074
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 36 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1)]
+gamma is 0.44394248480853693
+obj value 0.2144370804617339
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1)) : (8, 24)
+len 2
+[-1, -1]
+processing num: 37 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0)]
+gamma is 0.44394248480853693
+obj value 0.23097012561637825
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 38 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1)]
+gamma is 0.44394248480853693
+obj value 0.2296514255004864
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1)) : (16, 21)
+len 2
+[-1, -1]
+processing num: 39 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1)]
+gamma is 0.44394248480853693
+obj value 0.21436894873423346
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1)) : (10, 42)
+len 2
+[-1, -1]
+processing num: 40 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0)]
+gamma is 0.44394248480853693
+obj value 0.2167388253203954
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0)) : (1, 4)
+len 2
+[-1, -1]
+processing num: 41 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1)]
+gamma is 0.44394248480853693
+obj value 0.21343521346016792
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1)) : (4, 10)
+len 2
+[-1, -1]
+processing num: 42 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1)]
+gamma is 0.4795126881751664
+obj value 0.19959210965436164
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 43 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0)]
+gamma is 0.4795126881751664
+obj value 0.21129896725103706
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0)) : (0, 41)
+len 2
+[-1, -1]
+processing num: 44 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1)]
+gamma is 0.4795126881751664
+obj value 0.2113021749793894
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 45 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1)]
+gamma is 0.4795126881751664
+obj value 0.20681873219004518
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1)) : (35, 36)
+len 2
+[-1, -1]
+processing num: 46 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0)]
+gamma is 0.4795126881751664
+obj value 0.20832977809739373
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 47 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1)]
+gamma is 0.4795126881751664
+obj value 0.20662474691150928
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 48 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1)]
+gamma is 0.4795126881751664
+obj value 0.20629825378027186
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1)) : (0, 41)
+len 2
+[-1, -1]
+processing num: 49 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0)]
+gamma is 0.4795126881751664
+obj value 0.207635563295897
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 50 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1)]
+gamma is 0.4795126881751664
+obj value 0.20662474691150928
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 51 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, -1)]
+gamma is 0.4795126881751664
+obj value 0.21236963538513387
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, -1)) : (2, 25)
+len 2
+[-1, -1]
+processing num: 52 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, 0)]
+gamma is 0.4795126881751664
+obj value 0.21236963538513384
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, 0)) : (3, 5)
+len 2
+[-1, -1]
+processing num: 53 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, 1)]
+gamma is 0.4795126881751664
+obj value 0.20758776226786904
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, 1)) : (1, 6)
+len 2
+[-1, -1]
+processing num: 54 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, -1)]
+gamma is 0.4795126881751664
+obj value 0.2110702674506375
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, -1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 55 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, 0)]
+gamma is 0.4795126881751664
+obj value 0.21107026745063762
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, 0)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 56 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, 1)]
+gamma is 0.4795126881751664
+obj value 0.20758776226786912
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 0), (0, 4, 1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 57 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, -1)]
+gamma is 0.4795126881751664
+obj value 0.20633466114578397
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, -1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 58 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, 0)]
+gamma is 0.4795126881751664
+obj value 0.2144842654433822
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, 0)) : (3, 4)
+len 2
+[-1, -1]
+processing num: 59 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, 1)]
+gamma is 0.4795126881751664
+obj value 0.2144842945587862
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, 1), (1, 2, 1)) : (1, 5)
+len 2
+[-1, -1]
+processing num: 60 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, -1)]
+gamma is 0.4795126881751664
+obj value 0.20633466114578397
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, -1)) : (0, 3)
+len 2
+[-1, -1]
+processing num: 61 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, 0)]
+gamma is 0.4795126881751664
+obj value 0.20817004902069977
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, 0)) : (0, 3)
+len 2
+[-1, -1]
+processing num: 62 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, 1)]
+gamma is 0.4795126881751664
+obj value 0.20817004902069977
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, -1), (1, 3, 1)) : (1, 5)
+len 2
+[-1, -1]
+processing num: 63 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, -1)]
+gamma is 0.4795126881751664
+obj value 0.2144843108444846
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, -1)) : (0, 43)
+len 2
+[-1, -1]
+processing num: 64 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, 0)]
+gamma is 0.4795126881751664
+obj value 0.21451486607276016
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, 0)) : (1, 4)
+len 2
+[-1, -1]
+processing num: 65 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, 1)]
+gamma is 0.4795126881751664
+obj value 0.2145148660727599
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 0), (11, 13, 1)) : (1, 3)
+len 2
+[-1, -1]
+processing num: 66 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, -1)]
+gamma is 0.4795126881751664
+obj value 0.21788602048852115
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, -1)) : (1, 5)
+len 2
+[-1, -1]
+processing num: 67 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, 0)]
+gamma is 0.4795126881751664
+obj value 0.21788602048852118
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, 0)) : (2, 4)
+len 2
+[-1, -1]
+processing num: 68 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, 1)]
+gamma is 0.4795126881751664
+obj value 0.21448426544338223
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 1), (1, 2, 1), (0, 1, 1)) : (0, 4)
+len 2
+[-1, -1]
+processing num: 69 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, -1)]
+gamma is 0.4795126881751664
+obj value 0.22578341251119702
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, -1)) : (8, 39)
+len 2
+[-1, -1]
+processing num: 70 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, 0)]
+gamma is 0.4795126881751664
+obj value 0.23313710970477086
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, 0)) : (13, 36)
+len 2
+[-1, -1]
+processing num: 71 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, 1)]
+gamma is 0.4795126881751664
+obj value 0.21341946650682586
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, -1), (32, 34, 1)) : (24, 30)
+len 2
+[-1, -1]
+processing num: 72 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, -1)]
+gamma is 0.4795126881751664
+obj value 0.23405600652598202
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, -1)) : (18, 41)
+len 2
+[-1, -1]
+processing num: 73 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, 0)]
+gamma is 0.4795126881751664
+obj value 0.2366229491848144
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 74 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, 1)]
+gamma is 0.4795126881751664
+obj value 0.23458810679786488
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 0), (16, 30, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 75 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, -1)]
+gamma is 0.4795126881751664
+obj value 0.23179054083370415
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, -1)) : (33, 34)
+len 2
+[-1, -1]
+processing num: 76 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, 0)]
+gamma is 0.4795126881751664
+obj value 0.23662294918481436
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 77 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, 1)]
+gamma is 0.4795126881751664
+obj value 0.23458810679786488
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, -1), (29, 30, 1), (16, 30, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 78 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, -1)]
+gamma is 0.4795126881751664
+obj value 0.22066335873607656
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, -1)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 79 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, 0)]
+gamma is 0.4795126881751664
+obj value 0.22066337444692502
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, 0)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 80 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, 1)]
+gamma is 0.4795126881751664
+obj value 0.2134923895137652
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, -1), (8, 24, 1)) : (24, 30)
+len 2
+[-1, -1]
+processing num: 81 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, -1)]
+gamma is 0.4795126881751664
+obj value 0.24038758250629236
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, -1)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 82 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, 0)]
+gamma is 0.4795126881751664
+obj value 0.24038756443061615
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, 0)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 83 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, 1)]
+gamma is 0.4795126881751664
+obj value 0.22879536818587176
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 0), (16, 40, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 84 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, -1)]
+gamma is 0.4795126881751664
+obj value 0.24467850387176987
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, -1)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 85 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, 0)]
+gamma is 0.4795126881751664
+obj value 0.24467852667537032
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, 0)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 86 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, 1)]
+gamma is 0.4795126881751664
+obj value 0.22719570460093697
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 0), (29, 30, 1), (16, 21, 1)) : (2, 20)
+len 2
+[-1, -1]
+processing num: 87 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, -1)]
+gamma is 0.4795126881751664
+obj value 0.21265026417104557
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, -1)) : (36, 42)
+len 2
+[-1, -1]
+processing num: 88 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, 0)]
+gamma is 0.4795126881751664
+obj value 0.2174160815693298
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, 0)) : (4, 21)
+len 2
+[-1, -1]
+processing num: 89 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, 1)]
+gamma is 0.4795126881751664
+obj value 0.2174160815693298
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, -1), (10, 42, 1)) : (4, 21)
+len 2
+[-1, -1]
+processing num: 90 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, -1)]
+gamma is 0.4795126881751664
+obj value 0.21536045022607464
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, -1)) : (36, 42)
+len 2
+[-1, -1]
+processing num: 91 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, 0)]
+gamma is 0.4795126881751664
+obj value 0.21703187121807177
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, 0)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 92 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, 1)]
+gamma is 0.4795126881751664
+obj value 0.21666638572358976
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 0), (1, 4, 1)) : (11, 16)
+len 2
+[-1, -1]
+processing num: 93 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, -1)]
+gamma is 0.4795126881751664
+obj value 0.21253642881887236
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, -1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 94 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, 0)]
+gamma is 0.4795126881751664
+obj value 0.2146968585673353
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, 0)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 95 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, 1)]
+gamma is 0.4795126881751664
+obj value 0.21469685856733534
+((4, 30, -1), (2, 42, -1), (2, 22, 0), (24, 32, 1), (30, 42, 1), (4, 10, 1)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 96 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, -1)]
+gamma is 0.4795126881751664
+obj value 0.22578341251119702
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, -1)) : (8, 39)
+len 2
+[-1, -1]
+processing num: 97 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, 0)]
+gamma is 0.4795126881751664
+obj value 0.23313710970477086
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, 0)) : (13, 36)
+len 2
+[-1, -1]
+processing num: 98 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, 1)]
+gamma is 0.4795126881751664
+obj value 0.21341946650682586
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, -1), (32, 34, 1)) : (24, 30)
+len 2
+[-1, -1]
+processing num: 99 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, -1)]
+gamma is 0.4795126881751664
+obj value 0.234056006525982
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, -1)) : (18, 41)
+len 2
+[-1, -1]
+processing num: 100 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, 0)]
+gamma is 0.4795126881751664
+obj value 0.2366229491848144
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 101 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, 1)]
+gamma is 0.4795126881751664
+obj value 0.23458810679786488
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 0), (16, 30, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 102 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, -1)]
+gamma is 0.4795126881751664
+obj value 0.23179054083370415
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, -1)) : (33, 34)
+len 2
+[-1, -1]
+processing num: 103 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, 0)]
+gamma is 0.4795126881751664
+obj value 0.2366229491848144
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, 0)) : (16, 40)
+len 2
+[-1, -1]
+processing num: 104 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, 1)]
+gamma is 0.4795126881751664
+obj value 0.23458810679786485
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, -1), (29, 30, 1), (16, 30, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 105 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, -1)]
+gamma is 0.4795126881751664
+obj value 0.2206633587360765
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, -1)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 106 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, 0)]
+gamma is 0.4795126881751664
+obj value 0.22066335873607656
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, 0)) : (16, 30)
+len 2
+[-1, -1]
+processing num: 107 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, 1)]
+gamma is 0.4795126881751664
+obj value 0.2134923895137652
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, -1), (8, 24, 1)) : (24, 30)
+len 2
+[-1, -1]
+processing num: 108 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, -1)]
+gamma is 0.4795126881751664
+obj value 0.24038755103621948
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, -1)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 109 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, 0)]
+gamma is 0.4795126881751664
+obj value 0.24038755103621948
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, 0)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 110 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, 1)]
+gamma is 0.4795126881751664
+obj value 0.22879536173046217
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 0), (16, 40, 1)) : (16, 19)
+len 2
+[-1, -1]
+processing num: 111 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, -1)]
+gamma is 0.4795126881751664
+obj value 0.24467853614761742
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, -1)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 112 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, 0)]
+gamma is 0.4795126881751664
+obj value 0.24467850387176987
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, 0)) : (8, 11)
+len 2
+[-1, -1]
+processing num: 113 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, 1)]
+gamma is 0.4795126881751664
+obj value 0.22719570460093697
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 0), (29, 30, 1), (16, 21, 1)) : (2, 20)
+len 2
+[-1, -1]
+processing num: 114 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, -1)]
+gamma is 0.4795126881751664
+obj value 0.21265026417104557
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, -1)) : (36, 42)
+len 2
+[-1, -1]
+processing num: 115 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, 0)]
+gamma is 0.4795126881751664
+obj value 0.2174160815693298
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, 0)) : (4, 21)
+len 2
+[-1, -1]
+processing num: 116 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, 1)]
+gamma is 0.4795126881751664
+obj value 0.2174160815693298
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, -1), (10, 42, 1)) : (4, 21)
+len 2
+[-1, -1]
+processing num: 117 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, -1)]
+gamma is 0.4795126881751664
+obj value 0.21536045022607464
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, -1)) : (36, 42)
+len 2
+[-1, -1]
+processing num: 118 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, 0)]
+gamma is 0.4795126881751664
+obj value 0.2170318712180718
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, 0)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 119 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, 1)]
+gamma is 0.4795126881751664
+obj value 0.21666638572358976
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 0), (1, 4, 1)) : (11, 16)
+len 2
+[-1, -1]
+processing num: 120 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, -1)]
+gamma is 0.4795126881751664
+obj value 0.21253642881887236
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, -1)) : (0, 1)
+len 2
+[-1, -1]
+processing num: 121 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, 0)]
+gamma is 0.4795126881751664
+obj value 0.2146968585673353
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, 0)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 122 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, 1)]
+gamma is 0.4795126881751664
+obj value 0.21469685856733534
+((4, 30, -1), (2, 42, -1), (2, 22, 1), (24, 32, 1), (30, 42, 1), (4, 10, 1)) : (10, 16)
+len 2
+[-1, -1]
+processing num: 123 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, -1)]
+gamma is 0.5126206262178403
+obj value 0.20321601269685013
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, -1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 124 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, 0)]
+gamma is 0.5126206262178403
+obj value 0.20321601269685016
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, 0)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 125 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, 1)]
+gamma is 0.5126206262178403
+obj value 0.19862445219740696
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, -1), (0, 1, 1)) : (0, 3)
+len 2
+[-1, -1]
+processing num: 126 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, -1)]
+gamma is 0.5126206262178403
+obj value 0.21160993296639713
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, -1)) : (0, 40)
+len 2
+[-1, -1]
+processing num: 127 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, 0)]
+gamma is 0.5126206262178403
+obj value 0.2116099329663971
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, 0)) : (1, 5)
+len 2
+[-1, -1]
+processing num: 128 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, 1)]
+gamma is 0.5126206262178403
+obj value 0.2102594888208776
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 0), (0, 41, 1)) : (1, 3)
+len 2
+[-1, -1]
+processing num: 129 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, -1)]
+gamma is 0.5126206262178403
+obj value 0.2153387647238129
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, -1)) : (1, 5)
+len 2
+[-1, -1]
+processing num: 130 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, 0)]
+gamma is 0.5126206262178403
+obj value 0.21533871097662735
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, 0)) : (1, 3)
+len 2
+[-1, -1]
+processing num: 131 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, 1)]
+gamma is 0.5126206262178403
+obj value 0.21025949513919162
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, -1), (1, 2, 1), (0, 1, 1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 132 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, -1)]
+gamma is 0.5126206262178403
+obj value 0.2580458962804966
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, -1)) : (13, 41)
+len 2
+[-1, -1]
+processing num: 133 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, 0)]
+gamma is 0.5126206262178403
+obj value 0.2580458962804966
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, 0)) : (13, 41)
+len 2
+[-1, -1]
+processing num: 134 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, 1)]
+gamma is 0.5126206262178403
+obj value 0.20615168135157658
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, -1), (35, 36, 1)) : (2, 3)
+len 2
+[-1, -1]
+processing num: 135 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, -1)]
+gamma is 0.5126206262178403
+obj value 0.22166191441933694
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, -1)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 136 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, 0)]
+gamma is 0.5126206262178403
+obj value 0.2216619144193369
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, 0)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 137 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, 1)]
+gamma is 0.5126206262178403
+obj value 0.20831144650308703
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 0), (24, 32, 1)) : (33, 34)
+len 2
+[-1, -1]
+processing num: 138 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, -1)]
+gamma is 0.5126206262178403
+obj value 0.22020124069373492
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, -1)) : (34, 39)
+len 2
+[-1, -1]
+processing num: 139 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, 0)]
+gamma is 0.5126206262178403
+obj value 0.22114495337571458
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, 0)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 140 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, 1)]
+gamma is 0.5126206262178403
+obj value 0.2065124970479978
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 0), (2, 43, 1), (24, 32, 1)) : (4, 36)
+len 2
+[-1, -1]
+processing num: 141 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, -1)]
+gamma is 0.5126206262178403
+obj value 0.20657346474646043
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, -1)) : (1, 2)
+len 2
+[-1, -1]
+processing num: 142 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, 0)]
+gamma is 0.5126206262178403
+obj value 0.20791566874116435
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, 0)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 143 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, 1)]
+gamma is 0.5126206262178403
+obj value 0.2069728610924583
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, -1), (0, 41, 1)) : (24, 32)
+len 2
+[-1, -1]
+processing num: 144 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, -1)]
+gamma is 0.5126206262178403
+obj value 0.22048353936360746
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, -1)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 145 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, 0)]
+gamma is 0.5126206262178403
+obj value 0.22114495337571458
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, 0)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 146 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, 1)]
+gamma is 0.5126206262178403
+obj value 0.20824938772519955
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 0), (24, 32, 1)) : (36, 43)
+len 2
+[-1, -1]
+processing num: 147 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, -1)]
+gamma is 0.5126206262178403
+obj value 0.21944967282337427
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, -1)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 148 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, 0)]
+gamma is 0.5126206262178403
+obj value 0.22114495337571458
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, 0)) : (18, 24)
+len 2
+[-1, -1]
+processing num: 149 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, 1)]
+gamma is 0.5126206262178403
+obj value 0.20638699738278654
+((4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, -1), (36, 42, 1), (2, 43, 1), (24, 32, 1)) : (2, 9)
+len 2
+[-1, -1]
+processing num: 150 
+
+aq [(4, 30, -1), (2, 42, -1), (2, 22, -1), (0, 2, 0), (0, 19, -1), (0, 1, -1), (2, 25, -1)]
+gamma is 0.5126206262178403
+Traceback (most recent call last):
+  File "/project/vayanou_403/caroline/covid_app/elicitation_for_website/query_look_up_table_new_fix_first_response.py", line 271, in <module>
+    main()
+  File "/project/vayanou_403/caroline/covid_app/elicitation_for_website/query_look_up_table_new_fix_first_response.py", line 267, in main
+    create_query_lookup_table(args)
+  File "/project/vayanou_403/caroline/covid_app/elicitation_for_website/query_look_up_table_new_fix_first_response.py", line 82, in create_query_lookup_table
+    item_a_opt, item_b_opt, _, objval_opt = find_optimal_query_mip(answered_queries, items, gamma=gamma,
+  File "/project/vayanou_403/caroline/covid_app/elicitation_for_website/get_next_query.py", line 115, in find_optimal_query_mip
+    queries, objval, _, _ = static_mip_optimal(
+  File "/project/vayanou_403/caroline/covid_app/elicitation_for_website/static_elicitation.py", line 335, in static_mip_optimal
+    print("obj value", m.objval)
+  File "src/gurobipy/model.pxi", line 354, in gurobipy.Model.__getattr__
+  File "src/gurobipy/model.pxi", line 1918, in gurobipy.Model.getAttr
+  File "src/gurobipy/attrutil.pxi", line 100, in gurobipy.__getattr
+AttributeError: Unable to retrieve attribute 'objval'
