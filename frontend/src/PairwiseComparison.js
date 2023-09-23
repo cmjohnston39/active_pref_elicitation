@@ -101,20 +101,18 @@ class PairwiseComparison extends React.Component {
 
         this.sectionInfo = [{
                   sectionType : "number",
-                  columnNums: [10,10],
-                  sectionName: "NumBranchingFeatures",
+                  columnNums: [9,9],
+                  sectionName: "Number of Features Used in Policies",
                   sectionDescription: ""
                 },
-//                {
-//                  sectionType : "plot",
-//                  plotType : "pie",
-//                  columnNums: [8,8],
-//                  sectionName: "Overall Survival Probability",
-//                  sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care"
-//                },
+                {
+                  sectionType : "number",
+                  columnNums: [10,10],
+                  sectionName: "Number of Protected Features Used in Policies",
+                  sectionDescription: ""
+                },
                     {
-                    sectionType : "plot",
-                    plotType : "bar",
+                    sectionType : "number",
                     columnNums: [11,11],
                     sectionName: "Average Treatment Effect",
 //                    sectionDescription: "Among People Who Need It",
