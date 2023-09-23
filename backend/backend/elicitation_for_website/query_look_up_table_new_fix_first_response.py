@@ -15,7 +15,7 @@ def create_query_lookup_table(args):
 
     """
 
-    file_str = args.input_csv[1:-30] + "_K" + str(args.max_K) + "_p" + str(args.confidence_level) + "_" + str(
+    file_str = args.input_csv[1:-30] + "_K" + str(args.max_K) + "_s" + str(args.sigma) + "_" + str(
         args.problem_type) + "_start" + str(args.first_response)
 
     print(file_str)
