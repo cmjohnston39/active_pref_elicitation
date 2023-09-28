@@ -22,6 +22,7 @@ def create_mip_model(time_lim=TIME_LIM, verbose=False, mipgap=None):
         m.params.MIPGap = mipgap
 
     m.params.NumericFocus=3
+    m.params.NodefileStart=0.5
 
     return m
 

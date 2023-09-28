@@ -166,7 +166,7 @@ def static_mip_optimal(
     # polyhedral definition for U^0, B_mat and b_vec
     B_mat, b_vec = get_u0(u0_type, num_features)
 
-    # print("B mat is", B_mat)
+    print("B mat is", B_mat)
 
     # number of items
     num_items = len(items)
@@ -237,11 +237,11 @@ def static_mip_optimal(
         fixed_queries=fixed_queries,
     )
 
-    # if K ==2:
-    #     p_vars[2,1].setAttr("lb",0.0)
-    #     p_vars[2,1].setAttr("ub",0.0)
-    #     q_vars[42,1].setAttr("lb",0.0)
-    #     q_vars[42, 1].setAttr("ub", 0.0)
+    # if K ==1:
+    #     p_vars[27,0].setAttr("lb",1.0)
+    #     p_vars[27,0].setAttr("ub",1.0)
+    #     q_vars[38,0].setAttr("lb",1.0)
+    #     q_vars[38, 0].setAttr("ub", 1.0)
 
     # now add continuous variables for each response scenario
     if problem_type == "maximin":
@@ -292,16 +292,28 @@ def static_mip_optimal(
         # store y_vars for each scenario
         y_vars = {}
         alpha_vars = {}
+        rho_vars = {}
+        nu_vars = {}
         beta_vars = {}
         v_bar_vars = {}
         w_bar_vars = {}
+        v_bar_prime_vars = {}
+        w_bar_prime_vars = {}
+        v_bar_prime_prime_vars = {}
+        w_bar_prime_prime_vars = {}
         for i, r in enumerate(scenario_list):
             for item in items:
                 (
                     alpha_vars[r, item.id],
                     beta_vars[r, item.id],
+                    rho_vars [r, item.id],
+                    nu_vars [r, item.id],
                     v_bar_vars[r, item.id],
                     w_bar_vars[r, item.id],
+                    v_bar_prime_vars[r, item.id],
+                    w_bar_prime_vars[r, item.id],
+                    v_bar_prime_prime_vars[r, item.id],
+                    w_bar_prime_prime_vars[r, item.id],
                 ) = add_r_constraints(
                     m,
                     tau,
@@ -341,7 +353,8 @@ def static_mip_optimal(
     print("obj value", m.objval)
 
     # for i in m.getVars():
-    #     print(i,i.x)
+    #     if i.x != 0.0:
+    #         print(i,i.x)
 
     if m.status == GRB.TIME_LIMIT:
         time_limit_reached = True
@@ -699,16 +712,25 @@ def add_r_constraints(
 
     if 0 in response_scenario:
         # print("0 in", response_scenario)
-        indiff_lb = -GRB.INFINITY
+        # indiff_lb = -GRB.INFINITY
+
+        if problem_type == "maximin":
+            indiff_lb = -GRB.INFINITY
+            indiff_ub = 0.0
+        if problem_type == "mmr":
+            indiff_lb = 0.0
+            indiff_ub = GRB.INFINITY
+
     else:
         indiff_lb = 0
+        indiff_ub = 0
 
     rho_vars = m.addVars(
-        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=0, name=f"rho_{id_str}"
+        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=indiff_ub, name=f"rho_{id_str}"
     )
 
     nu_vars = m.addVars(
-        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=0, name=f"nu_{id_str}"
+        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=indiff_ub, name=f"nu_{id_str}"
     )
 
 
@@ -735,12 +757,13 @@ def add_r_constraints(
         name=f"wbar_{id_str}",
     )
 
+
     v_bar_prime_vars = m.addVars(
         num_items,
         K_free,
         vtype=GRB.CONTINUOUS,
         lb=indiff_lb,
-        ub=0,
+        ub=indiff_ub,
         name=f"vbar'_{id_str}",
     )
     w_bar_prime_vars = m.addVars(
@@ -748,7 +771,7 @@ def add_r_constraints(
         K_free,
         vtype=GRB.CONTINUOUS,
         lb=indiff_lb,
-        ub=0,
+        ub=indiff_ub,
         name=f"wbar'_{id_str}",
     )
 
@@ -757,7 +780,7 @@ def add_r_constraints(
         K_free,
         vtype=GRB.CONTINUOUS,
         lb=indiff_lb,
-        ub=0,
+        ub=indiff_ub,
         name=f"vbar''_{id_str}",
     )
     w_bar_prime_prime_vars = m.addVars(
@@ -765,7 +788,7 @@ def add_r_constraints(
         K_free,
         vtype=GRB.CONTINUOUS,
         lb=indiff_lb,
-        ub=0,
+        ub=indiff_ub,
         name=f"wbar''_{id_str}",
     )
     # print("vbar",v_bar_vars)
@@ -787,50 +810,58 @@ def add_r_constraints(
                     raise Exception("response scenario value unexpected:", response_scenario[k])
         if problem_type == "mmr":
             for k in range(K):
-                m.addConstr(
-                    alpha_vars[k] + mu_var >= 0, name=f"alpha_constr_k{k}_{id_str}",
-                )
+                if response_scenario[k] == -1 or response_scenario[k] == 1:
+                    m.addConstr(
+                        alpha_vars[k] + mu_var >= 0, name=f"alpha_constr_k{k}_{id_str}",
+                    )
+                elif response_scenario[k] == 0:  # indifferent
+                    m.addConstr(
+                        -rho_vars[k] - nu_vars[k] + mu_var >= 0, name=f"rho_nu_constr_k{k}_{id_str}",
+                    )
+
+                else:
+                    raise Exception("response scenario value unexpected:", response_scenario[k])
 
     # constraints defining gamma and lambda - identical for mmr and maximin
     if problem_type == "maximin":
         for k in K_free:
             for i in range(num_items):
                 m.addGenConstrIndicator(p_vars[i, k], False, v_bar_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"p_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(p_vars[i, k], True, v_bar_vars[i, k] == alpha_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"p_constrB_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], False, w_bar_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"q_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], True, w_bar_vars[i, k] == alpha_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"q_constrB_k{k}_i{i}_{id_str}")
 
                 #----------------------------------------------------------------------------------
                 m.addGenConstrIndicator(p_vars[i, k], False, v_bar_prime_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"pp_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(p_vars[i, k], True, v_bar_prime_vars[i, k] == rho_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"pp_constrB_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], False, w_bar_prime_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"qq_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], True, w_bar_prime_vars[i, k] == rho_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"qq_constrB_k{k}_i{i}_{id_str}")
                 # ----------------------------------------------------------------------------------
                 m.addGenConstrIndicator(p_vars[i, k], False, v_bar_prime_prime_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"ppp_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(p_vars[i, k], True, v_bar_prime_prime_vars[i, k] == nu_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"ppp_constrB_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], False, w_bar_prime_prime_vars[i, k] == 0.0,
-                                        name=f"v_constrA_k{k}_i{i}_{id_str}")
+                                        name=f"qqq_constrA_k{k}_i{i}_{id_str}")
 
                 m.addGenConstrIndicator(q_vars[i, k], True, w_bar_prime_prime_vars[i, k] == nu_vars[k],
-                                        name=f"v_constrB_k{k}_i{i}_{id_str}")
+                                        name=f"qqq_constrB_k{k}_i{i}_{id_str}")
 
 
                 # m.addConstr(
@@ -913,31 +944,117 @@ def add_r_constraints(
     if problem_type == "mmr":
         for k in K_free:
             for i in range(num_items):
-                m.addConstr(
-                    v_bar_vars[i, k] >= -M * p_vars[i, k],
-                    name=f"p_constrA_k{k}_i{i}_{id_str}",
-                )
-                m.addConstr(
-                    v_bar_vars[i, k] >= alpha_vars[k],
-                    name=f"p_constrB_k{k}_i{i}_{id_str}",
-                )
-                m.addConstr(
-                    v_bar_vars[i, k] <= alpha_vars[k] + M * (1 - p_vars[i, k]),
-                    name=f"p_constrC_k{k}_i{i}_{id_str}",
-                )
+                m.addGenConstrIndicator(p_vars[i, k], False, v_bar_vars[i, k] == 0.0,
+                                        name=f"p_constrA_k{k}_i{i}_{id_str}")
 
-                m.addConstr(
-                    w_bar_vars[i, k] >= -M * q_vars[i, k],
-                    name=f"q_constrA_k{k}_i{i}_{id_str}",
-                )
-                m.addConstr(
-                    w_bar_vars[i, k] >= alpha_vars[k],
-                    name=f"q_constrB_k{k}_i{i}_{id_str}",
-                )
-                m.addConstr(
-                    w_bar_vars[i, k] <= alpha_vars[k] + M * (1 - q_vars[i, k]),
-                    name=f"q_constrC_k{k}_i{i}_{id_str}",
-                )
+                m.addGenConstrIndicator(p_vars[i, k], True, v_bar_vars[i, k] == alpha_vars[k],
+                                        name=f"p_constrB_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], False, w_bar_vars[i, k] == 0.0,
+                                        name=f"q_constrA_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], True, w_bar_vars[i, k] == alpha_vars[k],
+                                        name=f"q_constrB_k{k}_i{i}_{id_str}")
+
+                # m.addConstr(
+                #     v_bar_vars[i, k] >= -M * p_vars[i, k],
+                #     name=f"p_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_vars[i, k] >= alpha_vars[k],
+                #     name=f"p_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_vars[i, k] <= alpha_vars[k] + M * (1 - p_vars[i, k]),
+                #     name=f"p_constrC_k{k}_i{i}_{id_str}",
+                # )
+                #
+                # m.addConstr(
+                #     w_bar_vars[i, k] >= -M * q_vars[i, k],
+                #     name=f"q_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_vars[i, k] >= alpha_vars[k],
+                #     name=f"q_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_vars[i, k] <= alpha_vars[k] + M * (1 - q_vars[i, k]),
+                #     name=f"q_constrC_k{k}_i{i}_{id_str}",
+                # )
+                #-------------------------------------------------------------------
+                m.addGenConstrIndicator(p_vars[i, k], False, v_bar_prime_vars[i, k] == 0.0,
+                                        name=f"pp_constrA_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(p_vars[i, k], True, v_bar_prime_vars[i, k] == rho_vars[k],
+                                        name=f"pp_constrB_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], False, w_bar_prime_vars[i, k] == 0.0,
+                                        name=f"qq_constrA_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], True, w_bar_prime_vars[i, k] == rho_vars[k],
+                                        name=f"qq_constrB_k{k}_i{i}_{id_str}")
+                # m.addConstr(
+                #     v_bar_prime_vars[i, k] >= -M * p_vars[i, k],
+                #     name=f"p_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_prime_vars[i, k] >= rho_vars[k],
+                #     name=f"p_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_prime_vars[i, k] <= rho_vars[k] + M * (1 - p_vars[i, k]),
+                #     name=f"p_constrC_k{k}_i{i}_{id_str}",
+                # )
+                #
+                # m.addConstr(
+                #     w_bar_prime_vars[i, k] >= -M * q_vars[i, k],
+                #     name=f"q_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_prime_vars[i, k] >= rho_vars[k],
+                #     name=f"q_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_prime_vars[i, k] <= rho_vars[k] + M * (1 - q_vars[i, k]),
+                #     name=f"q_constrC_k{k}_i{i}_{id_str}",
+                # )
+                # -------------------------------------------------------------------
+                m.addGenConstrIndicator(p_vars[i, k], False, v_bar_prime_prime_vars[i, k] == 0.0,
+                                        name=f"ppp_constrA_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(p_vars[i, k], True, v_bar_prime_prime_vars[i, k] == nu_vars[k],
+                                        name=f"ppp_constrB_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], False, w_bar_prime_prime_vars[i, k] == 0.0,
+                                        name=f"qqq_constrA_k{k}_i{i}_{id_str}")
+
+                m.addGenConstrIndicator(q_vars[i, k], True, w_bar_prime_prime_vars[i, k] == nu_vars[k],
+                                        name=f"qqq_constrB_k{k}_i{i}_{id_str}")
+                # m.addConstr(
+                #     v_bar_prime_prime_vars[i, k] >= -M * p_vars[i, k],
+                #     name=f"p_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_prime_prime_vars[i, k] >= nu_vars[k],
+                #     name=f"p_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     v_bar_prime_prime_vars[i, k] <= nu_vars[k] + M * (1 - p_vars[i, k]),
+                #     name=f"p_constrC_k{k}_i{i}_{id_str}",
+                # )
+                #
+                # m.addConstr(
+                #     w_bar_prime_prime_vars[i, k] >= -M * q_vars[i, k],
+                #     name=f"q_constrA_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_prime_prime_vars[i, k] >= nu_vars[k],
+                #     name=f"q_constrB_k{k}_i{i}_{id_str}",
+                # )
+                # m.addConstr(
+                #     w_bar_prime_prime_vars[i, k] <= nu_vars[k] + M * (1 - q_vars[i, k]),
+                #     name=f"q_constrC_k{k}_i{i}_{id_str}",
+                # )
 
     # the big equality constraint
     for f in range(num_features):

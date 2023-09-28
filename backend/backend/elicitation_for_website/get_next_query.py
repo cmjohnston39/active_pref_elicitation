@@ -90,7 +90,7 @@ def get_next_query(
 
 
 def find_optimal_query_mip(
-    answered_queries, items, gamma=0.0, problem_type="maximin", eps=0.0
+    answered_queries, items, gamma=0.0, problem_type="maximin", u0_type = "positive_normed", eps=0.0, time_limit=None,
 ):
     """
     use the static elicitation MIP to find the next optimal query to ask. the next query can be constructed using any
@@ -122,16 +122,18 @@ def find_optimal_query_mip(
         subproblem_list=scenario_list,
         gamma_inconsistencies=gamma,
         problem_type=problem_type,
+        u0_type=u0_type,
+        time_lim=time_limit
     )
 
     item_a_opt = queries[-1].item_A
     item_b_opt = queries[-1].item_B
 
     robust_utility_a, _ = robust_utility(
-        item_a_opt, answered_queries=answered_queries, gamma_inconsistencies=gamma
+        item_a_opt, answered_queries=answered_queries, gamma_inconsistencies=gamma, u0_type=u0_type
     )
     robust_utility_b, _ = robust_utility(
-        item_b_opt, answered_queries=answered_queries, gamma_inconsistencies=gamma
+        item_b_opt, answered_queries=answered_queries, gamma_inconsistencies=gamma, u0_type=u0_type
     )
 
     # predict the agent's response

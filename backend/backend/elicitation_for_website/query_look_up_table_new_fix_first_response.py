@@ -80,7 +80,7 @@ def create_query_lookup_table(args):
         print("gamma is", gamma)
 
         item_a_opt, item_b_opt, _, objval_opt = find_optimal_query_mip(answered_queries, items, gamma=gamma,
-                           problem_type=args.problem_type, eps=0.0) #assumes positive normed utilities
+                           problem_type=args.problem_type, u0_type="box", eps=0.0, time_limit=args.time_limit)
 
 
         # item_a_exhaust, item_b_exhaust, _, objval_exhaust = find_optimal_query(answered_queries, items, gamma=gamma)
@@ -186,6 +186,12 @@ def main():
         default=0.0,
         help="st. dev. for distirbution of xi inconsistency values. If sigma=0, use no inconsistencies",
     )
+    parser.add_argument(
+        "--time-limit",
+        type=float,
+        default=1800000.0,
+        help="time limit for solver",
+    )
 
     parser.add_argument(
         "--confidence-level",
@@ -248,16 +254,17 @@ def main():
 
     if args.DEBUG:
         # fixed set of parameters, for debugging:
-        arg_str = "--max-K 4"
+        arg_str = "--max-K 1"
         arg_str += " --u0-type box"
-        arg_str += " --problem-type maximin"
-        arg_str += " --sigma 0.1"
+        arg_str += " --problem-type mmr"
+        arg_str += " --sigma 0.025"
         arg_str += " --confidence-level 0.9"
         arg_str += " --output-dir ./hi"
         arg_str += " --input-csv ../data/LAHSA/AdultHMIS_20210922_preprocessed_final_Robust_edit.csv"
         arg_str += " --fair-type sum"
-        arg_str += " --partworth"
+        # arg_str += " --partworth"
         arg_str += " --first-response=1,-1"
+        arg_str += " --time-limit 3600"
         # arg_str += " --same-query-num"
 
         args_fixed = parser.parse_args(arg_str.split())
