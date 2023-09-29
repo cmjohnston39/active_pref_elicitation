@@ -37,24 +37,36 @@ class ScenarioCopy extends React.Component {
             <React.Fragment>
                 <h2>Help make a difference!</h2>
                 <p className="lead">
-                    What happens if there isn't enough medical equipment available to treat every person who gets sick with COVID-19? Who gets an ICU bed? Who receives a ventilator? 
+                    What happens if there aren't enough housing resources available to support each person that experiences homelessness? Who should receive these scarce resources, including permanent housing?
                 </p>
                 <p className="lead">
-                Imagine that you are a healthcare professional working at a hospital during May of 2020 - before the wide-scale availability of vaccines and resources for treating COVID-19. <b style={{"fontWeight":'bold'}}>Your goal is to help determine a set of guidelines at the hospital to decide which patients will receive a bed, ventilator, or other lifesaving treatments in a critical care unit, when there are more patients than available resources.</b>
+                    In 2022, approximately 580,000 individuals were experiencing homelessness in the United States. Specifically in Los Angeles, California, there were over 69,144 persons experiencing homelessness on any given night in 2022 and only 28,600 housing units for such individuals, the majority of which were already occupied. This resource shortage necessitates a way to prioritize individuals for resources as they become available. However, it is difficult to design such a policy as moral trade-offs must be made between efficiency (e.g., having the most number of individuals successfully exit homelessness) and equity (e.g., giving people resources according to their needs).
                 </p>
                 <p className="lead">
-                    We have designed an adaptive questionnaire to learn your preferences for how these resources should be allocated. For each question, you will be shown a pair of policies. Please choose the policy with the outcomes that you prefer. These outcomes, which tell us the behavior of the policy, if implemented, include:
+                    These challenges are further complicated by preexisting disparities. For example, in LA, Black people are four times more represented among those experiencing homelessness than in the general population (LAHSA 2018). Policymakers may prefer to design allocation rules that do not exacerbate inequalities, while others may prefer giving people equal chances. Allocation policies could use an individual’s <b style={{"fontWeight":'bold'}}>protected features</b>, which includes characteristics such as <b style={{"fontWeight":'bold'}}>race, gender, or age,</b> in the name of equity, or may not use these features at all, in the name of fairness.
+                </p>
+                <p className="lead"> Imagine that you are a policymaker deciding how to design policies that allocate scarce resources to those experiencing homelessness.
+                <b style={{"fontWeight":'bold'}}>Your goal is to help determine a set of guidelines to decide who will receive housing resources, when there are more individuals in need than available resources.</b>
+                </p>
+                <p className="lead">
+                    We have designed an adaptive questionnaire to learn your preferences for how these resources should be allocated. For each question, you will be shown a pair of policies. Please choose the policy with the features that you prefer. These features, which include information about how the policy is designed and the performance metrics of the policy if implemented, are:
                     <ol type="1">
-                        <li>The total life years saved</li>
-                        <li>The proportion of patients that survive</li>
-                        <li>The proportion of patients that receive critical care by age group</li>
-                        <li>The proportion of patients that survive by age group</li>
+                        <li>Number of Features Used in the Policy</li>
+                        <li>Number of Protected Features Used in the Policy</li>
+                        <li>Increased Likelihood of Successfully Exiting Homelessness (Overall)</li>
+                        <li>Increased Likelihood of Successfully Exiting Homelessness (By Race or Ethnicity)</li>
+                        <li>Increased Likelihood of Successfully Exiting Homelessness (By Gender)</li>
+                        <li>Increased Likelihood of Successfully Exiting Homelessness (By Age)</li>
                     </ol> 
                 </p>
                 <p className="lead">
-                    These outcomes are based on real data from the UK from April to July 2020 that estimate how many COVID-19 patients would require critical care and a patient's chance of recovering from COVID based on their age. In these policies, an average of 12 out of every 100 patients must go without treatment due to scarce resource availability. In the graph below, you can additionally see the proportions of the population of COVID-19 patients by their age.  Please keep this information in mind as you take the questionnaire.
+                    Features 1 and 2 are related to a policy’s level of  <b style={{"fontWeight":'bold'}}> interpretability </b>. In general, policies that use less features may be more understandable, or interpretable, to policymakers and individuals in the system. Specifically, an individual could understand why they did or did not receive a resource. However, interpretability may deteriorate the other performance metrics.               </p>
+                <p className="lead">
+                Features 3-6 are related to a policy’s <b style={{"fontWeight":'bold'}}> efficiency</b> (3) and <b style={{"fontWeight":'bold'}}> fairness or equity</b> (4-6), estimated using historical data for 22,165 unhoused single adults from 16 communities across the US who exited homelessness between February 2015 and April 2018. The data includes the protected information (race or ethnicity, gender, and age) of the individual and whether they 1) received a housing resource (permanent housing), or 2) self-resolved, which can include living with family. It is important to note that being unhoused is a very dynamic situation and one can return to homelessness even after receiving support. Thus, the data additionally reports whether the individual is still housed 365 days after their initial exit from homelessness, corresponding to a successful exit from homelessness.
                 </p>
-
+                <p className="lead">
+                 In the graphs below, you can additionally see the proportions of the population experiencing homelessness by their race, gender, and age. Please keep this information in mind as you take the questionnaire.
+                </p>
                 <br></br>
                 <br></br>
                 {   
@@ -78,6 +90,11 @@ class ScenarioCopy extends React.Component {
                     For the questionnaire to be accepted, please take it only once and complete it in one sitting.
                     
                 </p>
+                <br></br>
+                Sources: <br></br>
+                The U.S. Department of Housing and Urban Development (2022). The 2022 Annual Homelessness Assessment Report (AHAR) to Congress. <br></br>
+                LAHSA (2018) Report and Recommendations of the Ad Hoc Committee on Black People Experiencing Homelessness.
+
                 
                 
             </React.Fragment>

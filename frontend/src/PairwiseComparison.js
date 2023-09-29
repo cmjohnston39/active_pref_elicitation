@@ -69,77 +69,80 @@ class PairwiseComparison extends React.Component {
         // go to next step or end function
         this.next = this.props.next;
 
-//        this.sectionInfo = [{
+//        this.sectionInfo =  [{
 //          sectionType : "number",
-//          columnNums: [7,7],
+//          columnNums: [0,0],
 //          sectionName: "Life Years Saved",
-//          sectionDescription: ""
+//          sectionDescription: "",
+//          toolTipText: 'The metric "life years saved" is based on the life expectancies of those that will recover from COVID-19 under a given policy. Policies with higher life years saved values will, in general, save lives that are younger than those with lower life years saved.'
 //        },{
 //          sectionType : "plot",
 //          plotType : "pie",
-//          columnNums: [8,8],
-//          sectionName: "Overall Survival Probability",
-//          sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care"
+//          columnNums: [1,1],
+//          sectionName: "Proportion of Patients that Survive",
+//          sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
+//          toolTipText: ''
 //        },
 //        {
 //            sectionType : "plot",
 //            plotType : "bar",
-//            columnNums: [0,5],
-//            sectionName: "Chance of Receiving Critical Care by Age Group",
-//            sectionDescription: "Among People Who Need It",
+//            columnNums: [9,14],
+//            sectionName: "Proportion of Patients that Receive Critical Care by Age Group",
+//            sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
+//            toolTipText: ''
 //          },
 //          {
 //            sectionType : "plot",
 //            plotType : "bar",
-//            columnNums: [9,14],
-//            sectionName: "Survival Probability",
-//            sectionDescription: "Chance of Surviving by Age Group"
+//            columnNums: [2,7],
+//            sectionName: "Proportion of Patients that Survive by Age Group",
+//            sectionDescription: "Among Those Who Contracted COVID-19 and Needed Critical Care",
+//            toolTipText: ''
 //          }
-//
-//
 //        ]
+
 
         this.sectionInfo = [{
                   sectionType : "number",
-                  columnNums: [9,9],
+                  columnNums: [0,0],
                   sectionName: "Number of Features Used in Policies",
-                  sectionDescription: ""
+                  sectionDescription: "",
+                  toolTipText: ''
                 },
                 {
                   sectionType : "number",
-                  columnNums: [10,10],
+                  columnNums: [1,1],
                   sectionName: "Number of Protected Features Used in Policies",
-                  sectionDescription: ""
+                  sectionDescription: "",
+                  toolTipText: "Protected features include an individual's race or ethnicity; gender; and/or age. "
                 },
                     {
                     sectionType : "number",
-                    columnNums: [11,11],
-                    sectionName: "Average Treatment Effect",
-//                    sectionDescription: "Among People Who Need It",
+                    columnNums: [2,2],
+                    sectionName: "Increased Likelihood of Exiting Homelessness (Overall)",
+                    toolTipText: ''
                   },
                 {
                     sectionType : "plot",
                     plotType : "bar",
-                    columnNums: [12,14],
-                    sectionName: "Conditional Average Treatment Effect (Race)",
-//                    sectionDescription: "Among People Who Need It",
+                    columnNums: [3,5],
+                    sectionName: "Increased Likelihood of Exiting Homelessness (By Race or Ethnicity)",
+                    toolTipText: ''
                   },
                   {
                     sectionType : "plot",
                     plotType : "bar",
-                    columnNums: [15,17],
-                    sectionName: "Conditional Average Treatment Effect (Gender)",
-                    //sectionDescription: "Chance of Surviving by Age Group"
+                    columnNums: [6,8],
+                    sectionName: "Increased Likelihood of Exiting Homelessness (By Gender)",
+                    toolTipText: ''
                   },
                   {
                     sectionType : "plot",
                     plotType : "bar",
-                    columnNums: [18,21],
-                    sectionName: "Conditional Average Treatment Effect (Age)",
-                    //sectionDescription: "Chance of Surviving by Age Group"
+                    columnNums: [9,12],
+                    sectionName: "Increased Likelihood of Exiting Homelessness (By Age)",
+                    toolTipText: ''
                   }
-
-
                 ]
     }
 
