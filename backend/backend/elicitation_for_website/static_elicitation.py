@@ -167,6 +167,7 @@ def static_mip_optimal(
     B_mat, b_vec = get_u0(u0_type, num_features)
 
     print("B mat is", B_mat)
+    print("b vec", b_vec)
 
     # number of items
     num_items = len(items)

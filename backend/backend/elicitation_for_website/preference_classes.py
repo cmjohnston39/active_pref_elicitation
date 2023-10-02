@@ -338,6 +338,9 @@ def u_set_model(answered_queries,
         #partworth utilities
         m.addConstr(quicksum(u_vars) == 1)
 
+    elif u0_type == "positive_box":
+        u_vars = m.addVars(num_features, vtype=GRB.CONTINUOUS, lb=0.0, ub=1.0)
+
     else:
         u_vars = m.addVars(num_features, vtype=GRB.CONTINUOUS, lb=-1.0, ub=1.0)
 

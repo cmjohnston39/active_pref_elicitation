@@ -35,7 +35,7 @@ def create_query_lookup_table(args):
     agents=[1]
 
     items = get_data_items_LAHSA(
-        args.input_csv, standardize_features=True
+        args.input_csv, normalize_features=True
         )
     for i in items:
         print("items are", i.features)
@@ -48,7 +48,9 @@ def create_query_lookup_table(args):
 
     print("first resposne is", first_response)
     print("args first resposne is", args.first_response)
-    if type(first_response[0]) == list:
+    if first_response is None:
+        pass
+    elif type(first_response[0]) == list:
         first_response = first_response[0]
         args.first_response=args.first_response[0]
 
@@ -80,7 +82,7 @@ def create_query_lookup_table(args):
         print("gamma is", gamma)
 
         item_a_opt, item_b_opt, _, objval_opt = find_optimal_query_mip(answered_queries, items, gamma=gamma,
-                           problem_type=args.problem_type, u0_type="box", eps=0.0, time_limit=args.time_limit)
+                           problem_type=args.problem_type, u0_type=args.u0_type, eps=0.0, time_limit=args.time_limit)
 
 
         # item_a_exhaust, item_b_exhaust, _, objval_exhaust = find_optimal_query(answered_queries, items, gamma=gamma)
@@ -99,7 +101,7 @@ def create_query_lookup_table(args):
         if len(answered_queries) != args.max_K - 1:
             small= 1000
 
-            print("len",len(args.first_response))
+            # print("len",len(args.first_response))
             print(args.first_response)
 
             if args.first_response == None or (count > len(args.first_response) -1):
@@ -245,7 +247,7 @@ def main():
         "--DEBUG",
         action="store_true",
         help="if set, use a fixed arg string. otherwise, parse args.",
-        default=False,
+        default=True,
     )
 
     args = parser.parse_args()
@@ -254,16 +256,16 @@ def main():
 
     if args.DEBUG:
         # fixed set of parameters, for debugging:
-        arg_str = "--max-K 1"
-        arg_str += " --u0-type box"
+        arg_str = "--max-K 5"
+        arg_str += " --u0-type positive_box"
         arg_str += " --problem-type mmr"
-        arg_str += " --sigma 0.025"
+        arg_str += " --sigma 0.05"
         arg_str += " --confidence-level 0.9"
         arg_str += " --output-dir ./hi"
         arg_str += " --input-csv ../data/LAHSA/AdultHMIS_20210922_preprocessed_final_Robust_edit.csv"
         arg_str += " --fair-type sum"
         # arg_str += " --partworth"
-        arg_str += " --first-response=1,-1"
+        # arg_str += " --first-response=1,-1"
         arg_str += " --time-limit 3600"
         # arg_str += " --same-query-num"
 
