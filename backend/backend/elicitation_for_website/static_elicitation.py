@@ -166,8 +166,8 @@ def static_mip_optimal(
     # polyhedral definition for U^0, B_mat and b_vec
     B_mat, b_vec = get_u0(u0_type, num_features)
 
-    print("B mat is", B_mat)
-    print("b vec", b_vec)
+    # print("B mat is", B_mat)
+    # print("b vec", b_vec)
 
     # number of items
     num_items = len(items)
@@ -239,10 +239,22 @@ def static_mip_optimal(
     )
 
     # if K ==1:
-    #     p_vars[27,0].setAttr("lb",1.0)
-    #     p_vars[27,0].setAttr("ub",1.0)
-    #     q_vars[38,0].setAttr("lb",1.0)
-    #     q_vars[38, 0].setAttr("ub", 1.0)
+    #     p_vars[10,0].setAttr("lb",1.0)
+    #     p_vars[10,0].setAttr("ub",1.0)
+    #     q_vars[18,0].setAttr("lb",1.0)
+    #     q_vars[18, 0].setAttr("ub", 1.0)
+    #
+    # if K ==2:
+    #     p_vars[8,1].setAttr("lb",1.0)
+    #     p_vars[8,1].setAttr("ub",1.0)
+    #     q_vars[22,1].setAttr("lb",1.0)
+    #     q_vars[22, 1].setAttr("ub", 1.0)
+    #
+    # if K ==3:
+    #     p_vars[2,2].setAttr("lb",1.0)
+    #     p_vars[2,2].setAttr("ub",1.0)
+    #     q_vars[17,2].setAttr("lb",1.0)
+    #     q_vars[17, 2].setAttr("ub", 1.0)
 
     # now add continuous variables for each response scenario
     if problem_type == "maximin":

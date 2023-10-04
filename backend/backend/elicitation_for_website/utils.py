@@ -41,8 +41,8 @@ def U0_positive_box(num_features):
     b_vec = np.concatenate(
         (np.repeat(0.0, num_features), np.repeat(-1.0, num_features))
     )
-    print("Bmat", B_mat)
-    print(b_vec)
+    # print("Bmat", B_mat)
+    # print(b_vec)
     return B_mat, b_vec
 
 def U0_box(num_features):
