@@ -238,11 +238,190 @@ def static_mip_optimal(
         fixed_queries=fixed_queries,
     )
 
-    # if K ==1:
-    #     p_vars[10,0].setAttr("lb",1.0)
-    #     p_vars[10,0].setAttr("ub",1.0)
-    #     q_vars[18,0].setAttr("lb",1.0)
-    #     q_vars[18, 0].setAttr("ub", 1.0)
+    print("scenario list is", scenario_list)
+    print("scenario list", scenario_list[0][0])
+
+    if K >=1:
+        p_vars[10,0].setAttr("lb",1.0)
+        p_vars[10,0].setAttr("ub",1.0)
+        q_vars[18,0].setAttr("lb",1.0)
+        q_vars[18, 0].setAttr("ub", 1.0)
+
+    if K >= 2:
+        print("we in the 2 loop")
+        if scenario_list[0][0] == -1:
+            print("we fixing")
+            p_vars[22, 1].setAttr("lb", 1.0)
+            p_vars[22, 1].setAttr("ub", 1.0)
+            q_vars[24, 1].setAttr("lb", 1.0)
+            q_vars[24, 1].setAttr("ub", 1.0)
+
+            if K >= 3:
+                print("scenario here", scenario_list[0][1])
+                if scenario_list[0][1] == -1 or scenario_list[0][1] == 0:
+                    print("we fixing again")
+                    p_vars[0, 2].setAttr("lb", 1.0)
+                    p_vars[0, 2].setAttr("ub", 1.0)
+                    q_vars[12, 2].setAttr("lb", 1.0)
+                    q_vars[12, 2].setAttr("ub", 1.0)
+
+                    if K >= 4:
+                        print("we fixing  yet again")
+                        print(scenario_list[0][2])
+                        if scenario_list[0][2] == 1:
+                            print("fixed he query here")
+                            p_vars[29, 3].setAttr("lb", 1.0)
+                            p_vars[29, 3].setAttr("ub", 1.0)
+                            q_vars[36, 3].setAttr("lb", 1.0)
+                            q_vars[36, 3].setAttr("ub", 1.0)
+
+                            if K >= 5:
+                                print("we fixing again yet ")
+                                if scenario_list[0][3] == -1:
+                                    p_vars[4, 4].setAttr("lb", 1.0)
+                                    p_vars[4, 4].setAttr("ub", 1.0)
+                                    q_vars[36, 4].setAttr("lb", 1.0)
+                                    q_vars[36, 4].setAttr("ub", 1.0)
+                                elif scenario_list[0][3] == 0:
+                                    p_vars[5, 4].setAttr("lb", 1.0)
+                                    p_vars[5, 4].setAttr("ub", 1.0)
+                                    q_vars[37, 4].setAttr("lb", 1.0)
+                                    q_vars[37, 4].setAttr("ub", 1.0)
+                                elif scenario_list[0][3] == 1:
+                                    p_vars[5, 4].setAttr("lb", 1.0)
+                                    p_vars[5, 4].setAttr("ub", 1.0)
+                                    q_vars[37, 4].setAttr("lb", 1.0)
+                                    q_vars[37, 4].setAttr("ub", 1.0)
+
+        elif scenario_list[0][0] == 0:
+            print("we fixing 1")
+            p_vars[8, 1].setAttr("lb", 1.0)
+            p_vars[8, 1].setAttr("ub", 1.0)
+            q_vars[22, 1].setAttr("lb", 1.0)
+            q_vars[22, 1].setAttr("ub", 1.0)
+
+            if K >= 3:
+                print("we fixing again he")
+                if scenario_list[0][1] == 0:
+                    p_vars[5, 2].setAttr("lb", 1.0)
+                    p_vars[5, 2].setAttr("ub", 1.0)
+                    q_vars[37, 2].setAttr("lb", 1.0)
+                    q_vars[37, 2].setAttr("ub", 1.0)
+
+                    if K >= 4:
+                        print("we fix")
+                        if scenario_list[0][2] == -1:
+                            p_vars[11, 3].setAttr("lb", 1.0)
+                            p_vars[11, 3].setAttr("ub", 1.0)
+                            q_vars[23, 3].setAttr("lb", 1.0)
+                            q_vars[23, 3].setAttr("ub", 1.0)
+
+                            if K >= 5:
+                                print("we fixing  in her")
+                                if scenario_list[0][3] == -1:
+                                    p_vars[31, 4].setAttr("lb", 1.0)
+                                    p_vars[31, 4].setAttr("ub", 1.0)
+                                    q_vars[37, 4].setAttr("lb", 1.0)
+                                    q_vars[37, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 0:
+                                    p_vars[5, 4].setAttr("lb", 1.0)
+                                    p_vars[5, 4].setAttr("ub", 1.0)
+                                    q_vars[6, 4].setAttr("lb", 1.0)
+                                    q_vars[6, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 1:
+                                    p_vars[24, 4].setAttr("lb", 1.0)
+                                    p_vars[24, 4].setAttr("ub", 1.0)
+                                    q_vars[32, 4].setAttr("lb", 1.0)
+                                    q_vars[32, 4].setAttr("ub", 1.0)
+
+                        elif scenario_list[0][2] == 0:
+                            p_vars[21, 3].setAttr("lb", 1.0)
+                            p_vars[21, 3].setAttr("ub", 1.0)
+                            q_vars[32, 3].setAttr("lb", 1.0)
+                            q_vars[32, 3].setAttr("ub", 1.0)
+
+                            if K >= 5:
+                                print("we fixing agan")
+                                if scenario_list[0][3] == -1:
+                                    p_vars[5, 4].setAttr("lb", 1.0)
+                                    p_vars[5, 4].setAttr("ub", 1.0)
+                                    q_vars[11, 4].setAttr("lb", 1.0)
+                                    q_vars[11, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 0:
+                                    p_vars[5, 4].setAttr("lb", 1.0)
+                                    p_vars[5, 4].setAttr("ub", 1.0)
+                                    q_vars[7, 4].setAttr("lb", 1.0)
+                                    q_vars[7, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 1:
+                                    p_vars[24, 4].setAttr("lb", 1.0)
+                                    p_vars[24, 4].setAttr("ub", 1.0)
+                                    q_vars[32, 4].setAttr("lb", 1.0)
+                                    q_vars[32, 4].setAttr("ub", 1.0)
+
+                        elif scenario_list[0][2] == 1:
+                            p_vars[2, 3].setAttr("lb", 1.0)
+                            p_vars[2, 3].setAttr("ub", 1.0)
+                            q_vars[13, 3].setAttr("lb", 1.0)
+                            q_vars[13, 3].setAttr("ub", 1.0)
+
+                            if K >= 5:
+                                print("we fixing again3")
+                                if scenario_list[0][3] == -1:
+                                    p_vars[1, 4].setAttr("lb", 1.0)
+                                    p_vars[1, 4].setAttr("ub", 1.0)
+                                    q_vars[42, 4].setAttr("lb", 1.0)
+                                    q_vars[42, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 0:
+                                    p_vars[0, 4].setAttr("lb", 1.0)
+                                    p_vars[0, 4].setAttr("ub", 1.0)
+                                    q_vars[1, 4].setAttr("lb", 1.0)
+                                    q_vars[1, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 1:
+                                    p_vars[6, 4].setAttr("lb", 1.0)
+                                    p_vars[6, 4].setAttr("ub", 1.0)
+                                    q_vars[35, 4].setAttr("lb", 1.0)
+                                    q_vars[35, 4].setAttr("ub", 1.0)
+
+                elif scenario_list[0][1] == 1:
+                    p_vars[12, 2].setAttr("lb", 1.0)
+                    p_vars[12, 2].setAttr("ub", 1.0)
+                    q_vars[31, 2].setAttr("lb", 1.0)
+                    q_vars[31, 2].setAttr("ub", 1.0)
+
+                    if K >= 4:
+                        print("we fixing ag")
+                        if scenario_list[0][2] == -1:
+                            p_vars[0, 3].setAttr("lb", 1.0)
+                            p_vars[0, 3].setAttr("ub", 1.0)
+                            q_vars[2, 3].setAttr("lb", 1.0)
+                            q_vars[2, 3].setAttr("ub", 1.0)
+
+                            if K >= 5:
+                                print("we fixing a")
+                                if scenario_list[0][3] == -1:
+                                    p_vars[29, 4].setAttr("lb", 1.0)
+                                    p_vars[29, 4].setAttr("ub", 1.0)
+                                    q_vars[36, 4].setAttr("lb", 1.0)
+                                    q_vars[36, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 0:
+                                    p_vars[3, 4].setAttr("lb", 1.0)
+                                    p_vars[3, 4].setAttr("ub", 1.0)
+                                    q_vars[10, 4].setAttr("lb", 1.0)
+                                    q_vars[10, 4].setAttr("ub", 1.0)
+
+                                elif scenario_list[0][3] == 1:
+                                    p_vars[3, 4].setAttr("lb", 1.0)
+                                    p_vars[3, 4].setAttr("ub", 1.0)
+                                    q_vars[10, 4].setAttr("lb", 1.0)
+                                    q_vars[10, 4].setAttr("ub", 1.0)
+
     #
     # if K ==2:
     #     p_vars[8,1].setAttr("lb",1.0)
