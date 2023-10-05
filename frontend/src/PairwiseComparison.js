@@ -105,42 +105,42 @@ class PairwiseComparison extends React.Component {
         this.sectionInfo = [{
                   sectionType : "number",
                   columnNums: [0,0],
-                  sectionName: "Number of Features Used in Policies",
+                  sectionName: "Number of Individuals' Characteristics Used in the Policy",
                   sectionDescription: "",
                   toolTipText: ''
                 },
                 {
                   sectionType : "number",
                   columnNums: [1,1],
-                  sectionName: "Number of Protected Features Used in Policies",
+                  sectionName: "Number of Individuals' Protected Characteristics Used in the Policy",
                   sectionDescription: "",
-                  toolTipText: "Protected features include an individual's race or ethnicity; gender; and/or age. "
+                  toolTipText: "Protected characteristics include an individual's race or ethnicity; gender; and/or age. "
                 },
                     {
                     sectionType : "number",
                     columnNums: [2,2],
-                    sectionName: "Increased Likelihood of Exiting Homelessness (Overall)",
+                    sectionName: "Chance of Exiting Homelessness (Overall)",
                     toolTipText: ''
                   },
                 {
                     sectionType : "plot",
                     plotType : "bar",
                     columnNums: [3,5],
-                    sectionName: "Increased Likelihood of Exiting Homelessness (By Race or Ethnicity)",
+                    sectionName: "Chance of Exiting Homelessness (By Race or Ethnicity)",
                     toolTipText: ''
                   },
                   {
                     sectionType : "plot",
                     plotType : "bar",
                     columnNums: [6,8],
-                    sectionName: "Increased Likelihood of Exiting Homelessness (By Gender)",
+                    sectionName: "Chance of Exiting Homelessness (By Gender)",
                     toolTipText: ''
                   },
                   {
                     sectionType : "plot",
                     plotType : "bar",
                     columnNums: [9,12],
-                    sectionName: "Increased Likelihood of Exiting Homelessness (By Age)",
+                    sectionName: "Chance of Exiting Homelessness (By Age)",
                     toolTipText: ''
                   }
                 ]

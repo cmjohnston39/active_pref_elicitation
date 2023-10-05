@@ -19,9 +19,6 @@ class PolicyNumberDisplay extends React.Component{
                         style: 'percent'
                     })}
                 </h1>
-                <p>
-                    {this.data.labels.slice(this.columnNums[0], this.columnNums[1]+1)}
-                </p>
             </Jumbotron>
         )}
         else{
@@ -34,9 +31,6 @@ class PolicyNumberDisplay extends React.Component{
 
                     })}
                 </h1>
-                <p>
-                    {this.data.labels.slice(this.columnNums[0], this.columnNums[1]+1)}
-                </p>
             </Jumbotron>
         )}
     }
