@@ -329,6 +329,7 @@ def robust_recommend_subproblem(
     m.addSOS(GRB.SOS_TYPE1, [y_vars[i] for i in range(len(items))])
     m.addConstr(quicksum(y_vars[i] for i in range(len(items))) == 1, name="y_constr")
 
+
     # add dual variables
     if problem_type == "maximin":
         mu_var, alpha_vars, rho_vars, nu_vars, beta_vars = add_rec_dual_variables(
@@ -391,7 +392,9 @@ def robust_recommend_subproblem(
 
     m.Params.DualReductions = 0
     # m.write("recommendation.lp")
+
     optimize(m)
+
 
     # --- gather results ---
 
