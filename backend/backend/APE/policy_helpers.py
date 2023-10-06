@@ -62,7 +62,7 @@ def rec_policy_data_prep(json_data, response_data, last_N=10):
         )
         answered_queries.append(Query(item_A, item_B, current_choice))
 
-    current_gamma = get_gamma(len(answered_queries), sigma=0.1, confidence_level=0.9)
+    current_gamma = get_gamma(len(answered_queries), sigma=0.05, confidence_level=0.9)
 
     return answered_queries, current_gamma
 
@@ -114,7 +114,7 @@ def elicitation_data_prep(json_data, response_data):
         answered_queries.append(Query(item_A, item_B, current_choice))
 
     current_gamma = get_gamma(
-        len(answered_queries) + 1, sigma=0.1, confidence_level=0.9
+        len(answered_queries) + 1, sigma=0.05, confidence_level=0.9
     )
     return answered_queries, tuple(answered_queries_adaptive), current_gamma
 
