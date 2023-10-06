@@ -36,10 +36,13 @@ for sequence in query_list:
                 q_list.append(Query(items[q[0]], items[q[1]],response=q[2]))
             q_list.append(Query(items[query_list[sequence][0]], items[query_list[sequence][1]], response=resp))
             # print(sequence, query_list[sequence])
-            print([(i.item_A.id, i.item_B.id, i.response) for i in q_list])
+            # print([(i.item_A.id, i.item_B.id, i.response) for i in q_list])
+
+            gamma = get_gamma(k=10, sigma=0.05, confidence_level=0.9)
+            print('gamma is', gamma)
 
             rec_item, _, _ = robust_recommend_subproblem(
-                q_list, items, problem_type="mmr", verbose=False, gamma=0.05, u0_type="positive_box"
+                q_list, items, problem_type="mmr", verbose=False, gamma=gamma, u0_type="positive_box"
             )
             # print("rec item id",rec_item.id)
 
