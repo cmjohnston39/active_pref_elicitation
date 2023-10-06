@@ -5,7 +5,7 @@ from gurobipy import *
 from gurobi_functions import create_mip_model, optimize
 from preference_classes import robust_utility, Query, is_feasible, Item, User
 from static_elicitation import static_mip_optimal
-from utils import U0_positive_normed
+from utils import U0_positive_normed, get_u0
 from random import randint, uniform
 from time import sleep
 
@@ -285,7 +285,7 @@ def find_optimal_query(answered_queries, items, verbose=False, gamma=0.0):
 
 
 def robust_recommend_subproblem(
-    answered_queries, items, problem_type="maximin", verbose=False, gamma=0.0
+    answered_queries, items, problem_type="maximin", verbose=False, gamma=0.0, u0_type="positive_normed"
 ):
     """
     solve the robust-recommendation subproblem: for a fixed set of queries and responses, contained in answered_queries
@@ -298,8 +298,7 @@ def robust_recommend_subproblem(
     """
 
     # if the agent's uncertainty set is empty, the recommendation subproblem is infeasible, return None
-    if not is_feasible(answered_queries, gamma_inconsistencies=gamma):
-
+    if not is_feasible(answered_queries, gamma_inconsistencies=gamma, u0_type=u0_type):
         print("wasn't feasible")
         return None, None, None
 
@@ -317,7 +316,7 @@ def robust_recommend_subproblem(
         assert query.response in Query.valid_responses
 
     # positive normed definition for U^0, b_mat and b_vec
-    b_mat, b_vec = U0_positive_normed(num_features)
+    b_mat, b_vec = get_u0(u0_type, num_features)
 
     # define beta vars (more dual variables)
     m_const = len(b_vec)
@@ -352,10 +351,14 @@ def robust_recommend_subproblem(
         beta_vars = {}
         alpha_vars = {}
         mu_vars = {}
+        rho_vars = {}
+        nu_vars = {}
         for item in items:
             (
                 mu_vars[item.id],
                 alpha_vars[item.id],
+                rho_vars[item.id],
+                nu_vars[item.id],
                 beta_vars[item.id],
             ) = add_rec_dual_variables(
                 m,
@@ -416,7 +419,7 @@ def robust_recommend_subproblem(
 
     # finally, find the minimum u-vector
     min_u_objval, u_vector = robust_utility(
-        recommended_item, answered_queries=answered_queries, gamma_inconsistencies=gamma
+        recommended_item, answered_queries=answered_queries, gamma_inconsistencies=gamma, u0_type=u0_type
     )
 
     return recommended_item, m.objVal, u_vector
@@ -460,6 +463,19 @@ def add_rec_dual_variables(
         beta_name = f"beta_{mmr_item.id}"
         alpha_name = f"alpha_{mmr_item.id}"
 
+    if 0 in responses:
+        # print("0 in", response_scenario)
+        # indiff_lb = -GRB.INFINITY
+        if problem_type == "maximin":
+            indiff_lb = -GRB.INFINITY
+            indiff_ub = 0.0
+        if problem_type == "mmr":
+            indiff_lb = 0.0
+            indiff_ub = GRB.INFINITY
+    else:
+        indiff_lb = 0
+        indiff_ub = 0
+
     beta_vars = m.addVars(
         m_const, vtype=GRB.CONTINUOUS, lb=dual_lb, ub=dual_ub, name=beta_name
     )
@@ -467,11 +483,11 @@ def add_rec_dual_variables(
         K, vtype=GRB.CONTINUOUS, lb=dual_lb, ub=dual_ub, name=alpha_name
     )
     rho_vars = m.addVars(
-        K, vtype=GRB.CONTINUOUS, lb=-GRB.INFINITY, ub=0, name=f"rho"
+        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=indiff_ub, name=f"rho"
     )
 
     nu_vars = m.addVars(
-        K, vtype=GRB.CONTINUOUS, lb=-GRB.INFINITY, ub=0, name=f"nu"
+        K, vtype=GRB.CONTINUOUS, lb=indiff_lb, ub=indiff_ub, name=f"nu"
     )
 
     if gamma > 0:
@@ -487,9 +503,18 @@ def add_rec_dual_variables(
                     raise Exception("response scenario value unexpected:", responses[k])
         if problem_type == "mmr":
             for k in range(K):
-                m.addConstr(
-                    alpha_vars[k] + mu_var >= 0, name=f"alpha_{mmr_item.id}_constr_k{k}"
-                )
+                if responses[k] == -1 or responses[k] == 1:
+                    m.addConstr(
+                        alpha_vars[k] + mu_var >= 0,
+                        name=f"alpha_constr_k{k}_resp{responses[k]}",
+                    )
+                elif responses[k] == 0:  # indifferent
+                    m.addConstr(
+                        -rho_vars[k] - nu_vars[k] + mu_var >= 0, name=f"rho_nu_constr_k{k}",
+                    )
+
+                else:
+                    raise Exception("response scenario value unexpected:", responses[k])
 
     # define an expression for each feature of x
     x_features = [

@@ -276,7 +276,7 @@ class User(Agent):
 
 
 def is_feasible(answered_queries,
-                gamma_inconsistencies=0.0):
+                gamma_inconsistencies=0.0, u0_type="positive_normed"):
     # return True if the answered_queries result in a non-empty uncertainty set U (i.e., U is the feasible region for u)
     # if gamma is not None, allow total absolute inconsistencies up to gamma:
     # - add eps to each evaluation
@@ -284,7 +284,7 @@ def is_feasible(answered_queries,
     num_features = len(answered_queries[0].item_A.features)
     return not robust_utility(Item(np.zeros(num_features), None),
                               answered_queries=answered_queries,
-                              gamma_inconsistencies=gamma_inconsistencies)[0] is None
+                              gamma_inconsistencies=gamma_inconsistencies,u0_type=u0_type)[0] is None
 
 
 def robust_utility(item, answered_queries,
